@@ -1,0 +1,41 @@
+.badgeRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.badgeIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badgeIcon img {
+  width: 64px;
+  height: auto;
+  object-fit: contain;
+  margin-right: -1.6rem;
+  z-index: 1;
+}
+
+.badge {
+  display: inline-block;
+  background: #e6f4d7;
+  color: #3a5d23;
+  font-size: 0.9rem;
+  padding: 0.4rem 1.5rem;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .badgeRow {
+    justify-content: center;
+  }
+  
+  .badge {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.8rem;
+  }
+} 

@@ -1,0 +1,105 @@
+.footerCta {
+  background: #174c3c;
+  color: #fff;
+  padding: 3rem 2rem 1.5rem 2rem;
+}
+.ctaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2d3a1a;
+  padding: 2rem 2.5rem;
+  border-radius: 24px;
+  margin-bottom: 2.5rem;
+  gap: 1rem;
+}
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffe066;
+}
+.footerMain {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+.brandInfo {
+  max-width: 300px;
+}
+.logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #ffe066;
+  margin-bottom: 0.7rem;
+}
+.contactBox {
+  background: #ffe066;
+  color: #174c3c;
+  border-radius: 12px;
+  padding: 0.7rem 1.2rem;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+.linksSection {
+  display: flex;
+  gap: 2.5rem;
+}
+.linksSection h4 {
+  color: #ffe066;
+  margin-bottom: 0.7rem;
+}
+.linksSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+.linksSection li {
+  margin-bottom: 0.4rem;
+  color: #fff;
+}
+.linksSection a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.linksSection a:hover {
+  color: #f7c948;
+}
+.socials a {
+  margin-right: 0.5rem;
+}
+.copyright {
+  text-align: center;
+  color: #e6f4d7;
+  font-size: 0.98rem;
+  margin-top: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footerCta {
+    padding: 2rem 1rem 1rem 1rem;
+  }
+  
+  .ctaRow {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .heading {
+    font-size: 1.5rem;
+  }
+  
+  .footerMain {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .linksSection {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+} 

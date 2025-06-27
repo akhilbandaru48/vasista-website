@@ -1,0 +1,38 @@
+.reputation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  background: #174c3c;
+  color: #fff;
+}
+.reputationContent {
+  max-width: 600px;
+}
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffe066;
+}
+.subheading {
+  font-size: 1.1rem;
+  color: #e6f4d7;
+}
+.featuresRow {
+  display: flex;
+  gap: 2rem;
+}
+.featureCard {
+  background: #fffbe9;
+  color: #174c3c;
+  border-radius: 16px;
+  padding: 1rem 1.2rem;
+  min-width: 180px;
+  box-shadow: 0 2px 12px rgba(60,60,60,0.06);
+}
+.reputationImage img {
+  max-width: 320px;
+  border-radius: 30px;
+  box-shadow: 0 8px 32px rgba(60,60,60,0.08);
+} 
+ 

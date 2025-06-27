@@ -1,0 +1,23 @@
+.gallery {
+  background: #fffbe9;
+  padding: 3rem 2rem;
+}
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3a1a;
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  justify-items: center;
+}
+.imageWrapper img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(60,60,60,0.06);
+} 

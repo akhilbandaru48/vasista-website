@@ -1,12 +1,8 @@
 import React from 'react';
-import './global.css';
+import Home from './pages/Home';
 
 const App = () => {
-  return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
-  )
-}
+  return <Home />;
+};
 
-export default App
+export default App;

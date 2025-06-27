@@ -1,0 +1,39 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  background: #fffbe9;
+}
+.aboutContent {
+  max-width: 600px;
+}
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3a1a;
+}
+.subheading {
+  font-size: 1.1rem;
+  color: #5a5a5a;
+}
+.statsRow {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.stat {
+  font-size: 1rem;
+  color: #3a5d23;
+}
+.stat span {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #f7c948;
+  margin-right: 0.3rem;
+}
+.aboutImage img {
+  max-width: 350px;
+  border-radius: 30px;
+  box-shadow: 0 8px 32px rgba(60,60,60,0.08);
+} 
