@@ -74,6 +74,34 @@ const Services = () => {
                 <li>Accent pieces</li>
               </ul>
             </div>
+
+            <div className={styles.serviceCard}>
+              <div className={styles.serviceIcon}>
+                <img src="/icons/bathroom.svg" alt="Bathroom Design" />
+              </div>
+              <h3>Bathroom Design</h3>
+              <p>Luxurious and functional bathroom spaces that provide both comfort and style for your daily routine.</p>
+              <ul>
+                <li>Custom vanity design</li>
+                <li>Tile & fixture selection</li>
+                <li>Storage optimization</li>
+                <li>Lighting & ventilation</li>
+              </ul>
+            </div>
+
+            <div className={styles.serviceCard}>
+              <div className={styles.serviceIcon}>
+                <img src="/icons/bedroom.svg" alt="Bedroom Design" />
+              </div>
+              <h3>Bedroom Design</h3>
+              <p>Peaceful and personalized bedroom sanctuaries that promote rest and relaxation.</p>
+              <ul>
+                <li>Custom bed frames</li>
+                <li>Wardrobe & storage</li>
+                <li>Lighting & ambiance</li>
+                <li>Color & texture design</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

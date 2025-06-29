@@ -70,8 +70,11 @@ const ContactInfo = () => {
   return (
     <div className={styles.contactInfoContainer}>
       <div className={styles.contactMethods}>
+        <div className={styles.contactMethodsHeader}>
         <h3>Get in Touch</h3>
         <p>Choose your preferred way to reach us</p>
+        </div>
+       
         <div className={styles.methodsGrid}>
           {contactMethods.map((method, index) => (
             <div key={index} className={styles.contactMethod}>

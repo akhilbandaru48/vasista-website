@@ -20,8 +20,10 @@
 
 .servicesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .serviceCard {
@@ -29,11 +31,15 @@
   padding: 2.5rem;
   border-radius: 15px;
   box-shadow: var(--boxshadow-primary);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .serviceCard:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .serviceIcon {
@@ -45,6 +51,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
+  flex-shrink: 0;
 }
 
 .serviceIcon img {
@@ -63,11 +70,13 @@
   color: var(--denary-color);
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
 
 .serviceCard ul {
   list-style: none;
   padding: 0;
+  margin-top: auto;
 }
 
 .serviceCard li {
@@ -287,6 +296,13 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 0 1rem;
@@ -301,6 +317,7 @@
   
   .servicesGrid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
   .processSteps {
@@ -337,5 +354,15 @@
   .processStep,
   .pricingCard {
     padding: 1.5rem;
+  }
+  
+  .serviceIcon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .serviceIcon img {
+    width: 30px;
+    height: 30px;
   }
 } 

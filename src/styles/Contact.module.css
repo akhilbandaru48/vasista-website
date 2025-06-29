@@ -82,9 +82,8 @@
 .contactForm {
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(20px);
-  border-radius: 24px;
-  padding: 3.5rem 2rem;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.08), 0 12px 24px rgba(247,201,72,0.12), inset 0 1px 0 rgba(255,255,255,0.9);
+  border-radius: 1.2rem;
+  padding: 2rem;
   border: 1px solid rgba(255,255,255,0.3);
   transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
   position: relative;
@@ -92,6 +91,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 1rem;
 }
 .contactForm::before {
   content: '';
@@ -110,11 +110,13 @@
 
 .formHeader {
   text-align: center;
+  margin-bottom: 2.5rem;
 }
 .formHeader h2 {
   font-size: 2.2rem;
   font-weight: 700;
   color: var(--secondary-color);
+  margin-bottom: 0.5rem;
   background: linear-gradient(135deg, var(--secondary-color), var(--tertiary-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -148,6 +150,8 @@
   transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
 }
 .inputWrapper:hover {
   border-color: rgba(23,76,60,0.15);
@@ -167,7 +171,7 @@
 
 .formInput, .formSelect, .formTextarea {
   width: 100%;
-  padding: 1.5rem 1.25rem 0.75rem;
+  padding: 1.5rem 1.25rem 1.5rem 0;
   border: none;
   background: transparent;
   font-size: 1rem;
@@ -178,13 +182,10 @@
   position: relative;
   z-index: 3;
   line-height: 1.5;
+  flex: 1;
 }
 .formInput::placeholder, .formSelect::placeholder, .formTextarea::placeholder {
-  color: #b0b7c3;
-  font-size: 1rem;
-  font-weight: 400;
-  opacity: 1;
-  letter-spacing: 0.01em;
+  color: transparent;
 }
 .formTextarea {
   resize: vertical;
@@ -205,8 +206,9 @@
 
 .floatingLabel {
   position: absolute;
-  top: 1.5rem;
   left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 1rem;
   color: #b0b7c3;
   transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
@@ -215,16 +217,22 @@
   font-weight: 500;
   line-height: 1;
   background: transparent;
+  white-space: nowrap;
+  padding: 0 0.5rem;
 }
 .floatingLabel.active {
+  left: 0.75rem;
   top: 0.75rem;
-  left: 1.25rem;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: var(--primary-color);
   font-weight: 600;
   transform: translateY(0);
   letter-spacing: 0.025em;
   z-index: 2;
+  background: rgba(255,255,255,0.95);
+  border-radius: 8px;
+  padding: 0.25rem 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .errorMessage {
@@ -253,7 +261,6 @@
 
 .submitButton {
   width: 100%;
-  margin-top: 1.5rem;
   padding: 1.1rem 0;
   background: linear-gradient(90deg, var(--primary-color), var(--quaternary-color));
   color: #fff;
@@ -301,12 +308,14 @@
   text-align: center;
   color: var(--primary-color);
   box-shadow: 0 2px 8px rgba(23,76,60,0.04);
+  margin-bottom: 2rem;
   animation: scaleIn 0.5s cubic-bezier(0.4,0,0.2,1);
 }
 .successIcon {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 .successIcon svg {
   width: 2.5rem;
@@ -317,6 +326,7 @@
 .successMessage h3 {
   font-size: 1.5rem;
   font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 .successMessage p {
   font-size: 1.1rem;
@@ -345,6 +355,37 @@
   40%, 60% { transform: translateX(4px); }
 }
 
+/* Responsive adjustments for floating labels */
+@media (max-width: 768px) {
+  .floatingLabel {
+    left: 1rem;
+    font-size: 0.95rem;
+  }
+  .floatingLabel.active {
+    left: 0.5rem;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+  .formInput, .formSelect, .formTextarea {
+    padding: 1.25rem 1rem 1.25rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .floatingLabel {
+    left: 0.875rem;
+    font-size: 0.9rem;
+  }
+  .floatingLabel.active {
+    left: 0.375rem;
+    font-size: 0.65rem;
+    padding: 0.15rem 0.3rem;
+  }
+  .formInput, .formSelect, .formTextarea {
+    padding: 1rem 0.875rem 1rem 0;
+  }
+}
+
 /* Accessibility & Utility */
 .sr-only {
   position: absolute;
@@ -355,6 +396,39 @@
   overflow: hidden;
   clip: rect(0,0,0,0);
   border: 0;
+}
+
+/* Focus styles for better accessibility */
+.formInput:focus,
+.formSelect:focus,
+.formTextarea:focus {
+  outline: none;
+}
+
+.inputWrapper:focus-within {
+  border-color: var(--primary-color);
+  box-shadow: 
+    0 0 0 4px rgba(247, 201, 72, 0.1),
+    0 8px 24px rgba(247, 201, 72, 0.15);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .floatingLabel.active {
+    background: var(--secondary-color);
+    color: white;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .floatingLabel,
+  .inputWrapper,
+  .formInput,
+  .formSelect,
+  .formTextarea {
+    transition: none;
+  }
 }
 
 /* --- Info Section Placeholder --- */
