@@ -1,17 +1,11 @@
 import React from 'react';
 import PageLayout from '../components/ui/PageLayout/PageLayout';
 import PageHero from '../components/ui/PageHero/PageHero';
-import Breadcrumb from '../components/ui/Breadcrumb/Breadcrumb';
 import ContactForm from '../components/ui/ContactForm/ContactForm';
 import ContactInfo from '../components/ui/ContactInfo/ContactInfo';
 import styles from '../styles/Contact.module.css';
 
 const Contact = () => {
-  const breadcrumbItems = [
-    { label: 'Home', path: '/' },
-    { label: 'Contact', path: '/contact' }
-  ];
-
   return (
     <PageLayout>
       <PageHero
@@ -25,8 +19,6 @@ const Contact = () => {
       
       <section className={styles.contactSection}>
         <div className={styles.container}>
-          <Breadcrumb items={breadcrumbItems} />
-          
           <div className={styles.contactContent}>
             <div className={styles.formSection}>
               <ContactForm />

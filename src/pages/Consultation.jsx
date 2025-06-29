@@ -28,9 +28,10 @@ const Consultation = () => {
     { value: 'commercial', label: 'Commercial' },
     { value: 'industrial', label: 'Industrial' },
     { value: 'hospitality', label: 'Hospitality' },
+    { value: 'healthcare', label: 'Healthcare' },
+    { value: 'educational', label: 'Educational' },
     { value: 'retail', label: 'Retail' },
     { value: 'office', label: 'Office Space' },
-    { value: 'mixed-use', label: 'Mixed-Use' },
     { value: 'other', label: 'Other' }
   ];
 
@@ -38,8 +39,7 @@ const Consultation = () => {
     { value: '', label: 'Select preferred time' },
     { value: 'morning', label: 'Morning (9:00 AM - 12:00 PM)' },
     { value: 'afternoon', label: 'Afternoon (12:00 PM - 3:00 PM)' },
-    { value: 'late-afternoon', label: 'Late Afternoon (3:00 PM - 6:00 PM)' },
-    { value: 'evening', label: 'Evening (6:00 PM - 8:00 PM)' },
+    { value: 'evening', label: 'Evening (3:00 PM - 6:00 PM)' },
     { value: 'flexible', label: 'Flexible - Any time works' }
   ];
 
@@ -56,7 +56,7 @@ const Consultation = () => {
         }
         return '';
       case 'projectLocation':
-        return value.trim().length < 5 ? 'Please provide a detailed project location' : '';
+        return value.trim().length < 5 ? 'Please provide a valid project location' : '';
       case 'projectType':
         return !value ? 'Please select a project type' : '';
       case 'preferredDate':
@@ -64,7 +64,7 @@ const Consultation = () => {
       case 'preferredTime':
         return !value ? 'Please select a preferred time' : '';
       case 'message':
-        return value.trim().length < 20 ? 'Please provide more details about your project (at least 20 characters)' : '';
+        return value.trim().length < 10 ? 'Please provide more details about your project (at least 10 characters)' : '';
       default:
         return '';
     }
@@ -131,7 +131,7 @@ const Consultation = () => {
       // Reset form after showing success message
       setTimeout(() => {
         setIsSubmitted(false);
-      }, 8000);
+      }, 5000);
     } catch (error) {
       console.error('Form submission error:', error);
       setErrors({ submit: 'Something went wrong. Please try again.' });
@@ -157,7 +157,7 @@ const Consultation = () => {
         badgeIcon="/icons/vasista-element-arrow.svg"
         badgeText="Free Consultation"
         title="Get a Free Consultation for Your Project"
-        subtitle="Let our expert team visit your site and provide personalized solutions tailored to your unique needs and vision."
+        subtitle="Let our experts visit your site and provide personalized solutions tailored to your needs."
         ctaText="Start Your Project"
         ctaLink="/contact"
       />
@@ -165,13 +165,13 @@ const Consultation = () => {
       <section className={styles.consultationSection}>
         <div className={styles.container}>
           <div className={styles.consultationContent}>
-            {/* Introduction Section */}
-            <div className={styles.introSection}>
-              <div className={styles.introContent}>
-                <h2>Why Choose Our Consultation?</h2>
+            {/* Left Column - Information */}
+            <div className={styles.infoSection}>
+              <div className={styles.infoContent}>
+                <h2>Why Choose Vasista for Your Project?</h2>
                 <p>
-                  Our free consultation service is designed to give you the best possible start 
-                  for your project. Here's what you can expect:
+                  Our team of experienced professionals will visit your location to understand your specific requirements, 
+                  assess the space, and provide you with a comprehensive consultation tailored to your project needs.
                 </p>
                 
                 <div className={styles.benefitsList}>
@@ -179,55 +179,51 @@ const Consultation = () => {
                     <div className={styles.benefitIcon}>
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M9 12l2 2 4-4"></path>
-                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"></path>
                       </svg>
                     </div>
-                    <div className={styles.benefitContent}>
+                    <div>
                       <h4>Site Visit & Assessment</h4>
-                      <p>Our experts will visit your location to understand the space, requirements, and constraints.</p>
+                      <p>Our experts will visit your location to understand your space and requirements.</p>
                     </div>
                   </div>
                   
                   <div className={styles.benefitItem}>
                     <div className={styles.benefitIcon}>
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                        <path d="M9 12l2 2 4-4"></path>
+                        <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"></path>
                       </svg>
                     </div>
-                    <div className={styles.benefitContent}>
-                      <h4>Expert Recommendations</h4>
-                      <p>Get professional advice on design, materials, timeline, and budget considerations.</p>
+                    <div>
+                      <h4>Personalized Solutions</h4>
+                      <p>Get customized recommendations based on your specific needs and budget.</p>
                     </div>
                   </div>
                   
                   <div className={styles.benefitItem}>
                     <div className={styles.benefitIcon}>
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <polyline points="14,2 14,8 20,8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <polyline points="10,9 9,9 8,9"></polyline>
+                        <path d="M9 12l2 2 4-4"></path>
+                        <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"></path>
                       </svg>
                     </div>
-                    <div className={styles.benefitContent}>
-                      <h4>Detailed Proposal</h4>
-                      <p>Receive a comprehensive proposal with design concepts, timeline, and cost estimates.</p>
+                    <div>
+                      <h4>No Obligation</h4>
+                      <p>Our consultation is completely free with no pressure to proceed with our services.</p>
                     </div>
                   </div>
                 </div>
                 
                 <div className={styles.contactInfo}>
                   <h4>Need Immediate Assistance?</h4>
-                  <p>Call us directly for urgent consultation requests:</p>
-                  <a href="tel:+15551234567" className={styles.phoneLink}>
-                    +1 (555) 123-4567
-                  </a>
+                  <p>Call us directly: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                  <p>Or email us: <a href="mailto:info@vasista.com">info@vasista.com</a></p>
                 </div>
               </div>
             </div>
 
-            {/* Consultation Form */}
+            {/* Right Column - Form */}
             <div className={styles.formSection}>
               <div className={styles.consultationFormContainer}>
                 {isSubmitted && (
@@ -251,7 +247,7 @@ const Consultation = () => {
                 >
                   <div className={styles.formHeader}>
                     <h3>Request Your Free Consultation</h3>
-                    <p>Fill out the form below and we'll arrange a site visit to discuss your project in detail.</p>
+                    <p>Fill out the form below and we'll schedule a visit to your project site.</p>
                   </div>
 
                   <div className={styles.formGrid}>
@@ -462,7 +458,7 @@ const Consultation = () => {
                         className={styles.formTextarea}
                         rows="5"
                         required
-                        placeholder="Tell us about your project, requirements, and any specific concerns..."
+                        placeholder="Tell us about your project requirements, goals, and any specific needs..."
                         aria-describedby={errors.message ? 'message-error' : undefined}
                       />
                       <label htmlFor="message" className={`${styles.floatingLabel} ${isFieldActive('message') ? styles.active : ''}`}>
@@ -492,7 +488,7 @@ const Consultation = () => {
                       <>
                         <span className={styles.spinner}></span>
                         Submitting Request...
-                        <span id="submitting-status" className="sr-only">Submitting consultation request, please wait</span>
+                        <span id="submitting-status" className="sr-only">Submitting form, please wait</span>
                       </>
                     ) : (
                       'Request Consultation'

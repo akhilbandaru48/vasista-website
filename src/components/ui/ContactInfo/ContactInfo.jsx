@@ -33,10 +33,10 @@ const ContactInfo = () => {
           <circle cx="12" cy="10" r="3"></circle>
         </svg>
       ),
-      title: 'Visit Us',
-      value: '123 Design Street, Creative City, CC 12345',
-      link: 'https://maps.google.com',
-      description: 'Schedule a consultation'
+      title: 'Schedule Consultation',
+      value: 'Free Site Visit & Assessment',
+      link: '/consultation',
+      description: 'Book your free consultation'
     }
   ];
 
