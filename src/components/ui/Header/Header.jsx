@@ -57,10 +57,8 @@ const Header = () => {
           <span>Free Consultations</span>
         </div>
         <div className={styles.rightInfo}>
-          <Link to="/blog">Blog</Link>
           <a href="#">Careers</a>
           <a href="#">FAQ</a>
-          <Link to="/contact">Contact</Link>
           <div className={styles.socials}>
             <a href="#"><img src="/icons/twitter.svg" alt="Twitter" className={styles.socialIcon} /></a>
             <a href="#"><img src="/icons/facebook.svg" alt="Facebook" className={styles.socialIcon} /></a>
@@ -88,13 +86,14 @@ const Header = () => {
           <li><Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>
           <li><Link to="/about" onClick={() => setIsMobileMenuOpen(false)}>About</Link></li>
           <li><Link to="/services" onClick={() => setIsMobileMenuOpen(false)}>Services</Link></li>
+          <li><Link to="/consultation" onClick={() => setIsMobileMenuOpen(false)}>Consultation</Link></li>
           <li><Link to="/projects" onClick={() => setIsMobileMenuOpen(false)}>Projects</Link></li>
           <li><Link to="/blog" onClick={() => setIsMobileMenuOpen(false)}>Blog</Link></li>
           <li><Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link></li>
         </ul>
         
         <div className={styles.navButton}>
-          <Link to="/contact" className="btn btn-lg">Get Free Consultation</Link>
+          <Link to="/consultation" className="btn btn-lg">Get Free Consultation</Link>
         </div>
       </nav>
     </header>

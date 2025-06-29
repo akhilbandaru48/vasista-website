@@ -12,7 +12,7 @@ const Services = () => {
         title="Comprehensive Design Solutions"
         subtitle="From concept to completion, we offer a full range of modular and interior design services tailored to your unique needs and vision."
         ctaText="Get Free Consultation"
-        ctaLink="/contact"
+        ctaLink="/consultation"
       />
       
       <section className={styles.servicesOverview}>
@@ -192,7 +192,7 @@ const Services = () => {
             <h2>Ready to Transform Your Space?</h2>
             <p>Let's discuss your project and create something extraordinary together.</p>
             <div className={styles.ctaButtons}>
-              <a href="/contact" className="btn btn-lg">Schedule Consultation</a>
+              <a href="/consultation" className="btn btn-lg">Schedule Consultation</a>
               <a href="/projects" className="btn btn-outline">View Portfolio</a>
             </div>
           </div>

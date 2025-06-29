@@ -371,7 +371,7 @@ const Projects = () => {
             <h2>Ready to Start Your Project?</h2>
             <p>Let's discuss your vision and create something extraordinary together.</p>
             <div className={styles.ctaButtons}>
-              <a href="/contact" className="btn btn-lg">Get Free Consultation</a>
+              <a href="/consultation" className="btn btn-lg">Get Free Consultation</a>
               <a href="/services" className="btn btn-outline">View Services</a>
             </div>
           </div>

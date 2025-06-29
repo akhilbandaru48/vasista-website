@@ -8,6 +8,7 @@ import ProjectDetail from './pages/ProjectDetail';
 import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
 import Contact from './pages/Contact';
+import Consultation from './pages/Consultation';
 import ScrollToTop from './components/ui/ScrollToTop/ScrollToTop';
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogDetail />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/consultation" element={<Consultation />} />
       </Routes>
     </Router>
   );

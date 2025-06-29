@@ -38,12 +38,15 @@
 .contactMethod {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
-  border-radius: 20px;
+  border-radius: 1.2rem;
   padding: 2rem;
   border: 1px solid rgba(23, 76, 60, 0.1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .contactMethod::before {
@@ -91,7 +94,11 @@
   transform: scale(1.1);
   box-shadow: 0 8px 20px rgba(247, 201, 72, 0.3);
 }
-
+.methodContent{
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
 .methodContent h4 {
   font-size: 1.25rem;
   font-weight: 600;
