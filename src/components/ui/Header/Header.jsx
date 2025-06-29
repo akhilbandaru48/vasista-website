@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './Header.module.css';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -39,6 +41,11 @@ const Header = () => {
     };
   }, [isMobileMenuOpen]);
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
   return (
     <header className={styles.header}>
       <div className={styles.topBar}>
@@ -50,10 +57,10 @@ const Header = () => {
           <span>Free Consultations</span>
         </div>
         <div className={styles.rightInfo}>
-          <a href="#">Blog</a>
+          <Link to="/blog">Blog</Link>
           <a href="#">Careers</a>
           <a href="#">FAQ</a>
-          <a href="#">Contact</a>
+          <Link to="/contact">Contact</Link>
           <div className={styles.socials}>
             <a href="#"><img src="/icons/twitter.svg" alt="Twitter" className={styles.socialIcon} /></a>
             <a href="#"><img src="/icons/facebook.svg" alt="Facebook" className={styles.socialIcon} /></a>
@@ -65,7 +72,7 @@ const Header = () => {
         </div>
       </div>
       <nav className={styles.navBar}>
-        <div className={styles.logo}>Vasista</div>
+        <Link to="/" className={styles.logo}>Vasista</Link>
         
         <button 
           className={`${styles.mobileMenuButton} ${isMobileMenuOpen ? styles.active : ''}`}
@@ -78,16 +85,16 @@ const Header = () => {
         </button>
         
         <ul className={`${styles.menu} ${isMobileMenuOpen ? styles.active : ''}`}>
-          <li><a href="#" onClick={() => setIsMobileMenuOpen(false)}>Home</a></li>
-          <li><a href="#" onClick={() => setIsMobileMenuOpen(false)}>About</a></li>
-          <li><a href="#" onClick={() => setIsMobileMenuOpen(false)}>Services</a></li>
-          <li><a href="#" onClick={() => setIsMobileMenuOpen(false)}>Projects</a></li>
-          <li><a href="#" onClick={() => setIsMobileMenuOpen(false)}>Blog</a></li>
-          <li><a href="#" onClick={() => setIsMobileMenuOpen(false)}>Contact</a></li>
+          <li><Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>
+          <li><Link to="/about" onClick={() => setIsMobileMenuOpen(false)}>About</Link></li>
+          <li><Link to="/services" onClick={() => setIsMobileMenuOpen(false)}>Services</Link></li>
+          <li><Link to="/projects" onClick={() => setIsMobileMenuOpen(false)}>Projects</Link></li>
+          <li><Link to="/blog" onClick={() => setIsMobileMenuOpen(false)}>Blog</Link></li>
+          <li><Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link></li>
         </ul>
         
         <div className={styles.navButton}>
-          <button className="btn btn-lg">Get Free Consultation</button>
+          <Link to="/contact" className="btn btn-lg">Get Free Consultation</Link>
         </div>
       </nav>
     </header>
