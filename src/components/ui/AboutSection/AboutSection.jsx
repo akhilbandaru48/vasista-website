@@ -1,12 +1,23 @@
 import React from 'react';
 import styles from './AboutSection.module.css';
+import BadgeRow from '../BadgeRow/BadgeRow';
 
 const AboutSection = () => (
-  <section className={styles.about}>
+  <section className={styles.aboutSection}>
     <div className={styles.aboutContent}>
-      <h2 className={styles.heading}>Crafting Dreams Into Reality. Designing Spaces That Inspire.</h2>
-      <p className={styles.subheading}>At Vasista, we believe every space has the potential to become extraordinary. Our team of passionate designers and skilled craftsmen work together to create modular solutions and interior designs that not only meet your needs but exceed your expectations. We're committed to transforming houses into homes and spaces into experiences.</p>
-      <button className="btn btn-lg">Discover Our Story</button>
+      <div className={styles.aboutContentText}>
+        <div className={styles.aboutContentTextHeading}><h2 className={styles.heading}>Crafting Dreams Into Reality. Designing Spaces That Inspire.</h2></div>
+        <div className={styles.aboutContentTextSubheading}>
+          <BadgeRow
+            icon="/icons/vasista-element-arrow.svg" 
+            text="Transforming Spaces with Innovative Design Solutions"
+            iconAlt="Innovative Design Solutions"
+          />
+          <p className={styles.subheading}>Our team of passionate designers and skilled craftsmen work together to create modular solutions and interior designs that not only meet your needs but exceed your expectations. We're committed to transforming houses into homes and spaces into experiences.</p>
+          <button className="btn btn-lg">Discover Our Story</button>
+        </div>
+      </div>
+
       <div className={styles.statsRow}>
         <div className={styles.stat}><span>15+</span> Years of Excellence</div>
         <div className={styles.stat}><span>500+</span> Projects Completed</div>
