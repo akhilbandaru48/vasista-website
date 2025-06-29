@@ -1,7 +1,7 @@
 import React from 'react';
 import PageLayout from '../components/ui/PageLayout/PageLayout';
 import PageHero from '../components/ui/PageHero/PageHero';
-import styles from './About.module.css';
+import styles from '../styles/About.module.css';
 
 const About = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import PageLayout from '../components/ui/PageLayout/PageLayout';
 import PageHero from '../components/ui/PageHero/PageHero';
-import styles from './Services.module.css';
+import styles from '../styles/Services.module.css';
 
 const Services = () => {
   return (
@@ -110,7 +110,7 @@ const Services = () => {
       </section>
 
       <section className={styles.pricingSection}>
-        <div className={styles.container}>
+        {/* <div className={styles.container}>
           <h2>Service Packages</h2>
           <div className={styles.pricingGrid}>
             <div className={styles.pricingCard}>
@@ -155,7 +155,7 @@ const Services = () => {
               <a href="/contact" className="btn btn-outline">Get Started</a>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
 
       <section className={styles.ctaSection}>

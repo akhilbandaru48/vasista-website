@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import PageLayout from '../components/ui/PageLayout/PageLayout';
 import Breadcrumb from '../components/ui/Breadcrumb/Breadcrumb';
-import styles from './ProjectDetail.module.css';
+import styles from '../styles/ProjectDetail.module.css';
 
 const ProjectDetail = () => {
   const { id } = useParams();

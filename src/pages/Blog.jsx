@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/ui/PageLayout/PageLayout';
 import PageHero from '../components/ui/PageHero/PageHero';
-import styles from './Blog.module.css';
+import styles from '../styles/Blog.module.css';
 
 const Blog = () => {
   const blogPosts = [

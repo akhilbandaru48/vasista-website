@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/ui/PageLayout/PageLayout';
 import PageHero from '../components/ui/PageHero/PageHero';
-import styles from './Projects.module.css';
+import styles from '../styles/Projects.module.css';
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('all');

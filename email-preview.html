@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template Preview - Vasista</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .preview-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .preview-header {
+            background: linear-gradient(135deg, #174c3c 0%, #2d3a1a 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .preview-content {
+            padding: 20px;
+        }
+        .preview-title {
+            color: #174c3c;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .preview-info {
+            background-color: #fdf8ee;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .field-row {
+            display: flex;
+            margin-bottom: 10px;
+            align-items: flex-start;
+        }
+        .field-label {
+            width: 120px;
+            font-weight: 600;
+            color: #174c3c;
+            font-size: 14px;
+        }
+        .field-value {
+            flex: 1;
+            color: #333;
+            font-size: 14px;
+        }
+        .reply-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #f7c948, #ffe066);
+            color: #2d3a1a;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 20px 0;
+        }
+        .preview-footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+        }
+        .preview-footer p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 14px;
+        }
+        .preview-footer a {
+            color: #f7c948;
+            text-decoration: none;
+        }
+        .mobile-preview {
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        .preview-tabs {
+            display: flex;
+            margin-bottom: 20px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .preview-tab {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+            background: #f8f9fa;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .preview-tab.active {
+            background: #174c3c;
+            color: white;
+        }
+        .preview-section {
+            display: none;
+        }
+        .preview-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <div class="preview-header">
+            <h1 style="margin: 0; font-size: 28px; font-weight: 700; letter-spacing: -0.5px;">Email Template Preview</h1>
+            <p style="margin: 10px 0 0 0; color: #f7c948; font-size: 16px; font-weight: 500;">Vasista Contact Form Email</p>
+        </div>
+        
+        <div class="preview-content">
+            <div class="preview-tabs">
+                <button class="preview-tab active" onclick="showPreview('desktop')">Desktop View</button>
+                <button class="preview-tab" onclick="showPreview('mobile')">Mobile View</button>
+            </div>
+
+            <!-- Desktop Preview -->
+            <div id="desktop-preview" class="preview-section active">
+                <div class="preview-title">Desktop Email Preview</div>
+                <div style="border: 2px solid #e9ecef; border-radius: 8px; padding: 20px; background: white;">
+                    <!-- Email Content -->
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f8f9fa;">
+                        <tr>
+                            <td align="center" style="padding: 40px 20px;">
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+                                    
+                                    <!-- Header -->
+                                    <tr>
+                                        <td style="background: linear-gradient(135deg, #174c3c 0%, #2d3a1a 100%); padding: 40px 30px; text-align: center;">
+                                            <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700; letter-spacing: -0.5px;">Vasista</h1>
+                                            <p style="margin: 10px 0 0 0; color: #f7c948; font-size: 16px; font-weight: 500;">Interior Design & Renovation</p>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Content -->
+                                    <tr>
+                                        <td style="padding: 40px 30px;">
+                                            <h2 style="margin: 0 0 20px 0; color: #174c3c; font-size: 24px; font-weight: 600;">New Contact Form Submission</h2>
+                                            <p style="margin: 0 0 30px 0; color: #666; font-size: 16px;">You have received a new contact form submission from your website. Here are the details:</p>
+                                            
+                                            <!-- Submission Details -->
+                                            <div style="background-color: #fdf8ee; border-radius: 8px; padding: 25px; margin-bottom: 30px;">
+                                                <h3 style="margin: 0 0 20px 0; color: #174c3c; font-size: 18px; font-weight: 600;">Contact Information</h3>
+                                                
+                                                <div class="field-row">
+                                                    <div class="field-label">Name:</div>
+                                                    <div class="field-value">Sarah Johnson</div>
+                                                </div>
+                                                
+                                                <div class="field-row">
+                                                    <div class="field-label">Email:</div>
+                                                    <div class="field-value">
+                                                        <a href="mailto:sarah.johnson@example.com" style="color: #f7c948; text-decoration: none;">sarah.johnson@example.com</a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="field-row">
+                                                    <div class="field-label">Phone:</div>
+                                                    <div class="field-value">
+                                                        <a href="tel:+15551234567" style="color: #f7c948; text-decoration: none;">+1 (555) 123-4567</a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="field-row">
+                                                    <div class="field-label">Subject:</div>
+                                                    <div class="field-value">Kitchen Remodel Project</div>
+                                                </div>
+                                                
+                                                <div class="field-row">
+                                                    <div class="field-label">Project Type:</div>
+                                                    <div class="field-value">Kitchen Remodel</div>
+                                                </div>
+                                                
+                                                <div class="field-row">
+                                                    <div class="field-label">Budget Range:</div>
+                                                    <div class="field-value">$25,000 - $50,000</div>
+                                                </div>
+                                                
+                                                <div class="field-row">
+                                                    <div class="field-label">Message:</div>
+                                                    <div class="field-value">
+                                                        <div style="line-height: 1.6; white-space: pre-wrap;">Hi there! I'm looking to remodel my kitchen and would love to discuss the project with you. 
+
+My current kitchen is quite outdated and I'm hoping to create a modern, functional space that's perfect for entertaining. I'm particularly interested in:
+
+• Open concept layout
+• Quartz countertops
+• Custom cabinetry
+• Modern appliances
+• Smart home integration
+
+I'd appreciate if you could schedule a consultation to discuss the project in detail. I'm available most weekday evenings and weekends.
+
+Looking forward to hearing from you!
+
+Best regards,
+Sarah</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="field-row">
+                                                    <div class="field-label">Submitted:</div>
+                                                    <div class="field-value">Monday, December 16, 2024 at 2:30 PM</div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Action Button -->
+                                            <div style="text-align: center;">
+                                                <a href="mailto:sarah.johnson@example.com?subject=Re: Kitchen Remodel Project" class="reply-button">Reply to Sarah</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Footer -->
+                                    <tr>
+                                        <td style="background-color: #f8f9fa; padding: 30px; text-align: center; border-top: 1px solid #e9ecef;">
+                                            <p style="margin: 0 0 15px 0; color: #666; font-size: 14px;">
+                                                <strong>Vasista</strong> - Interior Design & Renovation
+                                            </p>
+                                            <p style="margin: 0 0 15px 0; color: #666; font-size: 14px;">
+                                                📧 <a href="mailto:info@vasista.com" style="color: #f7c948; text-decoration: none;">info@vasista.com</a> | 
+                                                📞 <a href="tel:+15551234567" style="color: #f7c948; text-decoration: none;">+1 (555) 123-4567</a>
+                                            </p>
+                                            <p style="margin: 0; color: #999; font-size: 12px;">
+                                                This email was sent from your website contact form. Please respond within 24 hours for the best customer experience.
+                                            </p>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Mobile Preview -->
+            <div id="mobile-preview" class="preview-section">
+                <div class="preview-title">Mobile Email Preview</div>
+                <div class="mobile-preview">
+                    <div style="border: 2px solid #e9ecef; border-radius: 8px; padding: 15px; background: white;">
+                        <!-- Mobile Email Content -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f8f9fa;">
+                            <tr>
+                                <td align="center" style="padding: 20px 10px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="max-width: 400px; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+                                        
+                                        <!-- Header -->
+                                        <tr>
+                                            <td style="background: linear-gradient(135deg, #174c3c 0%, #2d3a1a 100%); padding: 30px 20px; text-align: center;">
+                                                <h1 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 700;">Vasista</h1>
+                                                <p style="margin: 10px 0 0 0; color: #f7c948; font-size: 14px;">Interior Design & Renovation</p>
+                                            </td>
+                                        </tr>
+
+                                        <!-- Content -->
+                                        <tr>
+                                            <td style="padding: 30px 20px;">
+                                                <h2 style="margin: 0 0 15px 0; color: #174c3c; font-size: 20px; font-weight: 600;">New Contact Form Submission</h2>
+                                                <p style="margin: 0 0 20px 0; color: #666; font-size: 14px;">You have received a new contact form submission from your website.</p>
+                                                
+                                                <!-- Submission Details -->
+                                                <div style="background-color: #fdf8ee; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+                                                    <h3 style="margin: 0 0 15px 0; color: #174c3c; font-size: 16px; font-weight: 600;">Contact Information</h3>
+                                                    
+                                                    <div style="margin-bottom: 12px;">
+                                                        <strong style="color: #174c3c; font-size: 13px;">Name:</strong><br>
+                                                        <span style="color: #333; font-size: 13px;">Sarah Johnson</span>
+                                                    </div>
+                                                    
+                                                    <div style="margin-bottom: 12px;">
+                                                        <strong style="color: #174c3c; font-size: 13px;">Email:</strong><br>
+                                                        <a href="mailto:sarah.johnson@example.com" style="color: #f7c948; font-size: 13px; text-decoration: none;">sarah.johnson@example.com</a>
+                                                    </div>
+                                                    
+                                                    <div style="margin-bottom: 12px;">
+                                                        <strong style="color: #174c3c; font-size: 13px;">Phone:</strong><br>
+                                                        <a href="tel:+15551234567" style="color: #f7c948; font-size: 13px; text-decoration: none;">+1 (555) 123-4567</a>
+                                                    </div>
+                                                    
+                                                    <div style="margin-bottom: 12px;">
+                                                        <strong style="color: #174c3c; font-size: 13px;">Subject:</strong><br>
+                                                        <span style="color: #333; font-size: 13px;">Kitchen Remodel Project</span>
+                                                    </div>
+                                                    
+                                                    <div style="margin-bottom: 12px;">
+                                                        <strong style="color: #174c3c; font-size: 13px;">Project Type:</strong><br>
+                                                        <span style="color: #333; font-size: 13px;">Kitchen Remodel</span>
+                                                    </div>
+                                                    
+                                                    <div style="margin-bottom: 12px;">
+                                                        <strong style="color: #174c3c; font-size: 13px;">Budget Range:</strong><br>
+                                                        <span style="color: #333; font-size: 13px;">$25,000 - $50,000</span>
+                                                    </div>
+                                                    
+                                                    <div style="margin-bottom: 12px;">
+                                                        <strong style="color: #174c3c; font-size: 13px;">Message:</strong><br>
+                                                        <div style="color: #333; font-size: 13px; line-height: 1.5; margin-top: 5px;">Hi there! I'm looking to remodel my kitchen and would love to discuss the project with you...</div>
+                                                    </div>
+                                                    
+                                                    <div>
+                                                        <strong style="color: #174c3c; font-size: 13px;">Submitted:</strong><br>
+                                                        <span style="color: #666; font-size: 13px;">Monday, December 16, 2024 at 2:30 PM</span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Action Button -->
+                                                <div style="text-align: center;">
+                                                    <a href="mailto:sarah.johnson@example.com?subject=Re: Kitchen Remodel Project" style="background: linear-gradient(135deg, #f7c948, #ffe066); color: #2d3a1a; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; display: inline-block;">Reply to Sarah</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <!-- Footer -->
+                                        <tr>
+                                            <td style="background-color: #f8f9fa; padding: 20px; text-align: center; border-top: 1px solid #e9ecef;">
+                                                <p style="margin: 0 0 10px 0; color: #666; font-size: 13px;">
+                                                    <strong>Vasista</strong> - Interior Design & Renovation
+                                                </p>
+                                                <p style="margin: 0 0 10px 0; color: #666; font-size: 13px;">
+                                                    📧 <a href="mailto:info@vasista.com" style="color: #f7c948; text-decoration: none;">info@vasista.com</a>
+                                                </p>
+                                                <p style="margin: 0; color: #999; font-size: 11px;">
+                                                    This email was sent from your website contact form.
+                                                </p>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPreview(type) {
+            // Hide all sections
+            document.querySelectorAll('.preview-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.preview-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(type + '-preview').classList.add('active');
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html> 

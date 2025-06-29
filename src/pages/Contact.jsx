@@ -1,9 +1,17 @@
 import React from 'react';
 import PageLayout from '../components/ui/PageLayout/PageLayout';
 import PageHero from '../components/ui/PageHero/PageHero';
-import styles from './Contact.module.css';
+import Breadcrumb from '../components/ui/Breadcrumb/Breadcrumb';
+import ContactForm from '../components/ui/ContactForm/ContactForm';
+import ContactInfo from '../components/ui/ContactInfo/ContactInfo';
+import styles from '../styles/Contact.module.css';
 
 const Contact = () => {
+  const breadcrumbItems = [
+    { label: 'Home', path: '/' },
+    { label: 'Contact', path: '/contact' }
+  ];
+
   return (
     <PageLayout>
       <PageHero
@@ -14,11 +22,19 @@ const Contact = () => {
         ctaText="Call Now"
         ctaLink="tel:1234567890"
       />
+      
       <section className={styles.contactSection}>
         <div className={styles.container}>
-          <h2>Contact Form</h2>
-          <div className={styles.placeholder}>
-            <p>Contact form coming soon. For inquiries, email us at <a href="mailto:info@vasista.com">info@vasista.com</a>.</p>
+          <Breadcrumb items={breadcrumbItems} />
+          
+          <div className={styles.contactContent}>
+            <div className={styles.formSection}>
+              <ContactForm />
+            </div>
+            
+            <div className={styles.infoSection}>
+              <ContactInfo />
+            </div>
           </div>
         </div>
       </section>

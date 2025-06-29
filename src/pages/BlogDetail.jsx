@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import PageLayout from '../components/ui/PageLayout/PageLayout';
 import Breadcrumb from '../components/ui/Breadcrumb/Breadcrumb';
-import styles from './BlogDetail.module.css';
+import styles from '../styles/BlogDetail.module.css';
 
 const BlogDetail = () => {
   const { slug } = useParams();
