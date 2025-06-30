@@ -1,35 +1,53 @@
-name: 🚀 Deploy React App via SSH
+name: 🚀 Deploy Vite App to vasista.abcd.graphics
 
 on:
   push:
     branches:
-      - Sandeep.S  # Change to your deploy branch if needed
+      - Sandeep.S  # Change this to your production branch if needed
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v3
 
-    - name: Setup Node
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18
+      - name: 🛠 Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
-    - name: Install dependencies
-      run: npm ci
+      - name: 📦 Install Dependencies
+        run: npm ci
 
-    - name: Build React app
-      run: npm run build  # Or use 'npm run build:prod' if your script name is different
+      - name: 🏗️ Build Vite App
+        run: |
+          echo "🛠 Building Vite app..."
+          npm run build
+          echo "✅ Build completed."
+          ls -la dist || (echo "❌ 'dist' folder not found!" && exit 1)
 
-    - name: Deploy to cPanel via SSH
-      uses: appleboy/scp-action@v0.1.7
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: ${{ secrets.SSH_PORT }}
-        source: "dist/*"
-        target: "vasista.abcd.graphics"
+      - name: 🚀 Deploy to cPanel (vasista.abcd.graphics)
+        env:
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+        run: |
+          echo "🔐 Setting up SSH..."
+          mkdir -p ~/.ssh
+          echo "$SSH_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H 93.127.195.85 >> ~/.ssh/known_hosts
+
+          echo "🧹 Cleaning old files on server..."
+          ssh -o StrictHostKeyChecking=no abcd@93.127.195.85 << 'EOF'
+            if [ -d "/home/abcd/vasista.abcd.graphics" ]; then
+              rm -rf /home/abcd/vasista.abcd.graphics/*
+              echo "✅ Server directory cleaned."
+            else
+              mkdir -p /home/abcd/vasista.abcd.graphics
+              echo "📁 Target directory created."
+            fi
+            EOF
+
+          echo "📤 Uploading new build files..."
+          scp -o StrictHostKeyChecking=no -r dist/* abcd@93.127.195.85:/home/abcd/vasista.abcd.graphics/
