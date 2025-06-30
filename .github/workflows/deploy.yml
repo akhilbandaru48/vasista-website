@@ -44,3 +44,6 @@ jobs:
           EOF
 
           scp -o StrictHostKeyChecking=no -r dist/* abcd@93.127.195.85:/home/abcd/vasista.abcd.graphics/
+#Runs Successfully
+
+
