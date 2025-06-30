@@ -15,7 +15,7 @@ const ServicesSection = () => (
     <h2 className={styles.heading}>Comprehensive Design Services That Transform Your Space</h2>
     <div className={styles.servicesContent}>
       <div className={styles.mainImage}>
-        <img src="/icons/Automated_Testing.avif" alt="Modular & Interior Design Services" />
+        <img src="/images/modular-kitchen-design.jpg" alt="Modular & Interior Design Services" />
       </div>
       <div className={styles.cardsGrid}>
         {services.map((service, idx) => (

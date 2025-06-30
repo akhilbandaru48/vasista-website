@@ -22,7 +22,7 @@ const HeroSection = () => (
       </div>
     </div>
     <div className={styles.heroImage}>
-      <img src="/images/hero-tree.png" alt="Modular Interior Design Hero" />
+      <img src="/images/hero-modern-interior.jpg" alt="Modern Interior Design Hero" />
     </div>
   </section>
 );

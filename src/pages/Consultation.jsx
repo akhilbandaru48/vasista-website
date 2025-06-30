@@ -375,9 +375,6 @@ const Consultation = () => {
                             </option>
                           ))}
                         </select>
-                        <label htmlFor="projectType" className={`${styles.floatingLabel} ${isFieldActive('projectType') ? styles.active : ''}`}>
-                          Project Type *
-                        </label>
                         {errors.projectType && (
                           <div id="projectType-error" className={styles.errorMessage} role="alert">
                             {errors.projectType}
@@ -402,9 +399,6 @@ const Consultation = () => {
                           required
                           aria-describedby={errors.preferredDate ? 'preferredDate-error' : undefined}
                         />
-                        <label htmlFor="preferredDate" className={`${styles.floatingLabel} ${isFieldActive('preferredDate') ? styles.active : ''}`}>
-                          Preferred Date *
-                        </label>
                         {errors.preferredDate && (
                           <div id="preferredDate-error" className={styles.errorMessage} role="alert">
                             {errors.preferredDate}
@@ -433,9 +427,6 @@ const Consultation = () => {
                             </option>
                           ))}
                         </select>
-                        <label htmlFor="preferredTime" className={`${styles.floatingLabel} ${isFieldActive('preferredTime') ? styles.active : ''}`}>
-                          Preferred Time *
-                        </label>
                         {errors.preferredTime && (
                           <div id="preferredTime-error" className={styles.errorMessage} role="alert">
                             {errors.preferredTime}
@@ -461,9 +452,6 @@ const Consultation = () => {
                         placeholder="Tell us about your project requirements, goals, and any specific needs..."
                         aria-describedby={errors.message ? 'message-error' : undefined}
                       />
-                      <label htmlFor="message" className={`${styles.floatingLabel} ${isFieldActive('message') ? styles.active : ''}`}>
-                        Project Description *
-                      </label>
                       {errors.message && (
                         <div id="message-error" className={styles.errorMessage} role="alert">
                           {errors.message}
