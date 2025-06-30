@@ -21,7 +21,7 @@ const Projects = () => {
       title: 'Kitchen Transformation',
       category: 'kitchen',
       shortDescription: 'A complete kitchen renovation featuring custom cabinetry, quartz countertops.',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop&crop=center',
+      image: '/images/kitchen-renovation.jpg',
       area: '250 sq ft',
       duration: '6 weeks',
       budget: '$25,000'
@@ -31,7 +31,7 @@ const Projects = () => {
       title: 'Contemporary Living Room',
       category: 'living',
       shortDescription: 'Open-concept living space with modular furniture and integrated entertainment system.',
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop&crop=center',
+      image: '/images/living-room-design.jpg',
       area: '400 sq ft',
       duration: '4 weeks',
       budget: '$18,000'
@@ -41,7 +41,7 @@ const Projects = () => {
       title: 'Luxury Master Bathroom',
       category: 'bathroom',
       shortDescription: 'Spa-inspired bathroom with custom vanities, walk-in shower, and premium fixtures.',
-      image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop&crop=center',
+      image: '/images/bathroom-renovation.jpg',
       area: '180 sq ft',
       duration: '5 weeks',
       budget: '$22,000'
@@ -51,7 +51,7 @@ const Projects = () => {
       title: 'Home Office Suite',
       category: 'office',
       shortDescription: 'Professional home office with built-in storage, ergonomic furniture, and modern lighting.',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop&crop=center',
+      image: '/images/office-design.jpg',
       area: '200 sq ft',
       duration: '3 weeks',
       budget: '$15,000'
@@ -61,7 +61,7 @@ const Projects = () => {
       title: 'Open Kitchen & Dining',
       category: 'kitchen',
       shortDescription: 'Seamless integration of kitchen and dining area with custom island and breakfast nook.',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop&crop=center',
+      image: '/images/modular-kitchen-design.jpg',
       area: '350 sq ft',
       duration: '7 weeks',
       budget: '$30,000'
@@ -71,7 +71,7 @@ const Projects = () => {
       title: 'Family Entertainment Room',
       category: 'living',
       shortDescription: 'Multi-functional family room with built-in entertainment center and flexible seating.',
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop&crop=center',
+      image: '/images/living-room-transformation.jpg',
       area: '450 sq ft',
       duration: '5 weeks',
       budget: '$20,000'
@@ -81,7 +81,7 @@ const Projects = () => {
       title: 'Minimalist Kitchen Design',
       category: 'kitchen',
       shortDescription: 'Clean lines and hidden storage create a clutter-free cooking environment.',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop&crop=center',
+      image: '/images/kitchen-renovation.jpg',
       area: '200 sq ft',
       duration: '5 weeks',
       budget: '$28,000'
@@ -91,7 +91,7 @@ const Projects = () => {
       title: 'Cozy Living Space',
       category: 'living',
       shortDescription: 'Warm and inviting living room with custom seating and ambient lighting.',
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop&crop=center',
+      image: '/images/living-room-design.jpg',
       area: '300 sq ft',
       duration: '3 weeks',
       budget: '$16,000'
@@ -101,7 +101,7 @@ const Projects = () => {
       title: 'Modern Bathroom Suite',
       category: 'bathroom',
       shortDescription: 'Contemporary bathroom with floating vanities and walk-in shower.',
-      image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop&crop=center',
+      image: '/images/bathroom-design.jpg',
       area: '150 sq ft',
       duration: '4 weeks',
       budget: '$19,000'
@@ -121,6 +121,7 @@ const Projects = () => {
         subtitle="Explore our collection of successful projects that showcase our expertise in modular design and interior transformation."
         ctaText="Start Your Project"
         ctaLink="/contact"
+        backgroundImage="/images/projects-hero.jpg"
       />
       
       <section className={styles.projectsSection}>

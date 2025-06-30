@@ -25,7 +25,15 @@ const steps = [
 ];
 
 const ProcessSection = () => (
-  <section className={styles.process}>
+  <section 
+    className={styles.process}
+    style={{
+      backgroundImage: `linear-gradient(  rgb(255 255 255 / 60%), rgb(255 255 255 / 20%)), url('/images/process-bg.jpg')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}
+  >
     <h2 className={styles.heading}>Our Proven Design Process</h2>
     <div className={styles.stepper}>
       {steps.map((step, idx) => (

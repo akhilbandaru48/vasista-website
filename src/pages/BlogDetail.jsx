@@ -35,7 +35,7 @@ const BlogDetail = () => {
       author: "Vasista Design Team",
       date: "March 20, 2024",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop&crop=center",
+      image: "/images/modern-interior.jpg",
       excerpt: "Discover the cutting-edge architectural trends that will dominate 2025, from sustainable materials to smart home integration and biophilic design principles."
     },
     "plan-dream-home-india": {
@@ -85,7 +85,7 @@ const BlogDetail = () => {
       author: "Arjun Sharma",
       date: "March 15, 2024",
       readTime: "8 min read",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop&crop=center",
+      image: "/images/design-inspiration.jpg",
       excerpt: "A comprehensive guide to planning your dream home in India, covering everything from site selection and Vastu principles to modern design considerations."
     },
     "sustainable-building-materials": {
@@ -124,7 +124,7 @@ const BlogDetail = () => {
       author: "Priya Patel",
       date: "March 10, 2024",
       readTime: "7 min read",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop&crop=center",
+      image: "/images/space-planning.jpg",
       excerpt: "Explore eco-friendly building materials that are revolutionizing construction while maintaining durability, aesthetics, and cost-effectiveness."
     },
     "vasista-project-design-execution": {
@@ -184,7 +184,7 @@ const BlogDetail = () => {
       author: "Vasista Team",
       date: "March 5, 2024",
       readTime: "10 min read",
-      image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop&crop=center",
+      image: "/images/modular-kitchen-design.jpg",
       excerpt: "Follow the complete journey of a Vasista project from initial concept to final execution, showcasing our design methodology and attention to detail."
     },
     "modular-kitchen-revolution": {
@@ -235,7 +235,7 @@ const BlogDetail = () => {
       author: "Meera Iyer",
       date: "February 28, 2024",
       readTime: "5 min read",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop&crop=center",
+      image: "/images/kitchen-renovation.jpg",
       excerpt: "Learn how modern modular kitchen designs are revolutionizing the heart of every home with smart storage solutions and contemporary aesthetics."
     },
     "maximizing-small-spaces-modular-design": {
@@ -295,7 +295,7 @@ const BlogDetail = () => {
       author: "Rahul Verma",
       date: "February 20, 2024",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&h=600&fit=crop&crop=center",
+      image: "/images/modular-furniture.jpg",
       excerpt: "Discover innovative modular solutions that transform cramped spaces into functional, beautiful areas that maximize every square foot."
     },
     "modern-kitchen-design-tips": {
@@ -340,7 +340,7 @@ const BlogDetail = () => {
       author: "Ananya Sharma",
       date: "February 15, 2024",
       readTime: "5 min read",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop&crop=center",
+      image: "/images/custom-furniture.jpg",
       excerpt: "Discover the key principles that make a kitchen both beautiful and functional. From layout optimization to material selection, learn how to create your dream kitchen."
     },
     "future-modular-furniture-small-spaces": {
@@ -385,7 +385,7 @@ const BlogDetail = () => {
       author: "Rohan Mehta",
       date: "February 10, 2024",
       readTime: "7 min read",
-      image: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&h=600&fit=crop&crop=center",
+      image: "/images/modular-kitchen-design.jpg",
       excerpt: "Explore innovative modular furniture designs that maximize space efficiency while maintaining style and comfort in compact living environments."
     },
     "color-psychology-interior-design": {
@@ -444,7 +444,7 @@ const BlogDetail = () => {
       author: "Priya Patel",
       date: "February 5, 2024",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop&crop=center",
+      image: "/images/space-planning.jpg",
       excerpt: "Understand how different colors affect our emotions and learn how to use color psychology to create the perfect atmosphere in your home."
     }
   };

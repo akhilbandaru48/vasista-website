@@ -10,7 +10,8 @@ const PageHero = ({
   highlightText = '', 
   ctaText = '', 
   ctaLink = '/contact',
-  showSocials = false 
+  showSocials = false,
+  backgroundImage = ''
 }) => {
   const renderTitle = () => {
     if (highlightText) {
@@ -26,8 +27,15 @@ const PageHero = ({
     return title;
   };
 
+  const heroStyle = backgroundImage ? {
+    backgroundImage: `linear-gradient(rgb(255 255 255 / 60%), rgb(255 255 255 / 20%)), url(${backgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
+  } : {};
+
   return (
-    <section className={styles.pageHero}>
+    <section className={styles.pageHero} style={heroStyle}>
       <div className={styles.heroContent}>
         {badgeIcon && badgeText && (
           <BadgeRow 

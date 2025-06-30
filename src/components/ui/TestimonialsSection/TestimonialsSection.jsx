@@ -162,6 +162,12 @@ const TestimonialsSection = () => {
     <section 
       className={`${styles.testimonials} ${isVisible ? styles.visible : ''}`} 
       ref={carouselRef}
+      style={{
+        backgroundImage: `linear-gradient(rgb(255 255 255 / 60%), rgb(255 255 255 / 20%)), url('/images/testimonial-bg.jpg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
     >
       <div className={styles.container}>
         <div className={styles.header}>

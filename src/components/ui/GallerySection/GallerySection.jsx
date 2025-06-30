@@ -5,9 +5,9 @@ const images = [
   '/images/gallery1.jpg',
   '/images/gallery2.jpg',
   '/images/gallery3.jpg',
-  '/images/living-room-transformation.jpg',
-  '/images/bathroom-design.jpg',
-  '/images/custom-furniture.jpg',
+  '/images/kitchen-renovation.jpg',
+  '/images/living-room-design.jpg',
+  '/images/bathroom-renovation.jpg',
 ];
 
 const GallerySection = () => (

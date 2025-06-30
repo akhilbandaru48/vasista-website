@@ -160,6 +160,7 @@ const Consultation = () => {
         subtitle="Let our experts visit your site and provide personalized solutions tailored to your needs."
         ctaText="Start Your Project"
         ctaLink="/contact"
+        backgroundImage="/images/consultation-hero.jpg"
       />
       
       <section className={styles.consultationSection}>

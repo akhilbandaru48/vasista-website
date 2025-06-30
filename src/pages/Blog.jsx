@@ -14,7 +14,7 @@ const Blog = () => {
       author: "Vasista Design Team",
       date: "March 20, 2024",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop&crop=center",
+      image: "/images/modern-interior.jpg",
       slug: "top-5-architectural-trends-2025"
     },
     {
@@ -25,7 +25,7 @@ const Blog = () => {
       author: "Arjun Sharma",
       date: "March 15, 2024",
       readTime: "8 min read",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop&crop=center",
+      image: "/images/design-inspiration.jpg",
       slug: "plan-dream-home-india"
     },
     {
@@ -36,7 +36,7 @@ const Blog = () => {
       author: "Priya Patel",
       date: "March 10, 2024",
       readTime: "7 min read",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop&crop=center",
+      image: "/images/space-planning.jpg",
       slug: "sustainable-building-materials"
     },
     {
@@ -47,7 +47,7 @@ const Blog = () => {
       author: "Vasista Team",
       date: "March 5, 2024",
       readTime: "10 min read",
-      image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop&crop=center",
+      image: "/images/color-psychology.jpg",
       slug: "vasista-project-design-execution"
     },
     {
@@ -58,7 +58,7 @@ const Blog = () => {
       author: "Meera Iyer",
       date: "February 28, 2024",
       readTime: "5 min read",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop&crop=center",
+      image: "/images/kitchen-renovation.jpg",
       slug: "modular-kitchen-revolution"
     },
     {
@@ -69,7 +69,7 @@ const Blog = () => {
       author: "Rahul Verma",
       date: "February 20, 2024",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&h=600&fit=crop&crop=center",
+      image: "/images/space-planning.jpg",
       slug: "maximizing-small-spaces-modular-design"
     },
     {
@@ -80,7 +80,7 @@ const Blog = () => {
       author: "Ananya Sharma",
       date: "February 15, 2024",
       readTime: "5 min read",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop&crop=center",
+      image: "/images/modular-kitchen-design.jpg",
       slug: "modern-kitchen-design-tips"
     },
     {
@@ -91,7 +91,7 @@ const Blog = () => {
       author: "Rohan Mehta",
       date: "February 10, 2024",
       readTime: "7 min read",
-      image: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&h=600&fit=crop&crop=center",
+      image: "/images/custom-furniture.jpg",
       slug: "future-modular-furniture-small-spaces"
     },
     {
@@ -102,7 +102,7 @@ const Blog = () => {
       author: "Priya Patel",
       date: "February 5, 2024",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop&crop=center",
+      image: "/images/color-psychology.jpg",
       slug: "color-psychology-interior-design"
     }
   ];
@@ -116,6 +116,7 @@ const Blog = () => {
         subtitle="Explore our latest articles, tips, and design inspiration for your next project."
         ctaText="Subscribe to Updates"
         ctaLink="#newsletter"
+        backgroundImage="/images/blog-hero.jpg"
       />
       
       <section className={styles.blogSection}>

@@ -24,10 +24,10 @@ const ProjectDetail = () => {
         <p>The material selection was crucial to achieving both beauty and durability. We chose quartz countertops for their low maintenance and timeless appeal, while the custom backsplash adds a personal touch that reflects the client's style.</p>
       `,
       images: [
-        'https://via.placeholder.com/800x600/4A90E2/FFFFFF?text=Modern+Kitchen+Main',
-        'https://via.placeholder.com/400x300/4A90E2/FFFFFF?text=Kitchen+Cabinetry',
-        'https://via.placeholder.com/400x300/4A90E2/FFFFFF?text=Kitchen+Countertops',
-        'https://via.placeholder.com/400x300/4A90E2/FFFFFF?text=Kitchen+Appliances'
+        '/images/kitchen-renovation.jpg',
+        '/images/modular-kitchen-design.jpg',
+        '/images/kitchen-renovation.jpg',
+        '/images/modular-kitchen-design.jpg'
       ],
       area: '250 sq ft',
       duration: '6 weeks',
@@ -71,10 +71,10 @@ const ProjectDetail = () => {
         <p>Lighting was a key consideration in this project. We implemented a layered lighting system with ambient, task, and accent lighting that can be controlled independently to create the perfect atmosphere for any occasion.</p>
       `,
       images: [
-        'https://via.placeholder.com/800x600/50C878/FFFFFF?text=Living+Room+Main',
-        'https://via.placeholder.com/400x300/50C878/FFFFFF?text=Entertainment+Center',
-        'https://via.placeholder.com/400x300/50C878/FFFFFF?text=Seating+Area',
-        'https://via.placeholder.com/400x300/50C878/FFFFFF?text=Accent+Wall'
+        '/images/living-room-design.jpg',
+        '/images/living-room-transformation.jpg',
+        '/images/living-room-design.jpg',
+        '/images/living-room-transformation.jpg'
       ],
       area: '400 sq ft',
       duration: '4 weeks',
@@ -118,10 +118,10 @@ const ProjectDetail = () => {
         <p>Smart technology was integrated throughout the space, from the heated floors to the smart mirror with built-in lighting and Bluetooth speakers. These features enhance the daily experience while maintaining the elegant aesthetic.</p>
       `,
       images: [
-        'https://via.placeholder.com/800x600/9370DB/FFFFFF?text=Luxury+Bathroom+Main',
-        'https://via.placeholder.com/400x300/9370DB/FFFFFF?text=Vanity+Area',
-        'https://via.placeholder.com/400x300/9370DB/FFFFFF?text=Shower+Detail',
-        'https://via.placeholder.com/400x300/9370DB/FFFFFF?text=Tub+Area'
+        '/images/bathroom-renovation.jpg',
+        '/images/bathroom-design.jpg',
+        '/images/bathroom-renovation.jpg',
+        '/images/bathroom-design.jpg'
       ],
       area: '180 sq ft',
       duration: '5 weeks',

@@ -6,7 +6,7 @@ const blogs = [
   {
     id: 1,
     slug: 'top-5-architectural-trends-2025',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop&crop=center',
+    image: '/images/modern-interior.jpg',
     title: 'Top 5 Architectural Trends in 2025',
     date: 'March 20, 2024',
     category: 'Architecture',
@@ -16,7 +16,7 @@ const blogs = [
   {
     id: 2,
     slug: 'plan-dream-home-india',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop&crop=center',
+    image: '/images/design-inspiration.jpg',
     title: 'How to Plan Your Dream Home in India',
     date: 'March 15, 2024',
     category: 'Planning',
@@ -26,7 +26,7 @@ const blogs = [
   {
     id: 3,
     slug: 'sustainable-building-materials',
-    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop&crop=center',
+    image: '/images/space-planning.jpg',
     title: 'Sustainable Building Materials You Should Know',
     date: 'March 10, 2024',
     category: 'Sustainability',
@@ -36,7 +36,7 @@ const blogs = [
   {
     id: 4,
     slug: 'vasista-project-design-execution',
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop&crop=center',
+    image: '/images/color-psychology.jpg',
     title: 'Inside a Vasista Project: Design to Execution Journey',
     date: 'March 5, 2024',
     category: 'Case Study',
@@ -46,7 +46,7 @@ const blogs = [
   {
     id: 5,
     slug: 'modular-kitchen-revolution',
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop&crop=center',
+    image: '/images/kitchen-renovation.jpg',
     title: 'Kitchen Design Revolution: Smart Modular Solutions',
     date: 'February 28, 2024',
     category: 'Kitchen Design',
@@ -56,7 +56,7 @@ const blogs = [
   {
     id: 6,
     slug: 'maximizing-small-spaces-modular-design',
-    image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&h=600&fit=crop&crop=center',
+    image: '/images/space-planning.jpg',
     title: 'Maximizing Small Spaces: 5 Modular Design Secrets',
     date: 'February 20, 2024',
     category: 'Modular Design',

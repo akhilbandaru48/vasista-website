@@ -13,6 +13,7 @@ const About = () => {
         subtitle="For over 15 years, Vasista has been transforming homes and businesses with innovative modular solutions and stunning interior designs that reflect our clients' unique vision and lifestyle."
         ctaText="View Our Portfolio"
         ctaLink="/projects"
+        backgroundImage="/images/about-hero.jpg"
       />
       
       <section className={styles.storySection}>
@@ -24,7 +25,7 @@ const About = () => {
               <p>We believe that great design is not just about aesthetics—it's about creating environments that support and inspire the people who live and work in them. Every project we undertake is an opportunity to blend creativity with functionality, innovation with tradition.</p>
             </div>
             <div className={styles.storyImage}>
-              <img src="/images/about-story.jpg" alt="Vasista team working on design" />
+              <img src="/images/space-planning.jpg" alt="Vasista team working on design" />
             </div>
           </div>
         </div>

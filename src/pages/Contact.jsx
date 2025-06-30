@@ -43,6 +43,7 @@ const Contact = () => {
         subtitle="Have a question or want to start your project? Reach out to our team and we'll get back to you soon."
         ctaText="Call Now"
         ctaLink="tel:1234567890"
+        backgroundImage="/images/contact-hero.jpg"
       />
       
       <section className={styles.contactSection}>

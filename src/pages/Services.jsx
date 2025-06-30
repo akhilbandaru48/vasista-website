@@ -13,6 +13,7 @@ const Services = () => {
         subtitle="From concept to completion, we offer a full range of modular and interior design services tailored to your unique needs and vision."
         ctaText="Get Free Consultation"
         ctaLink="/consultation"
+        backgroundImage="/images/services-hero.jpg"
       />
       
       <section className={styles.servicesOverview}>
