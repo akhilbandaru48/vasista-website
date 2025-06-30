@@ -1,0 +1,35 @@
+name: 🚀 Deploy React App via SSH
+
+on:
+  push:
+    branches:
+      - Sandeep.S  # Change to your deploy branch if needed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build React app
+      run: npm run build  # Or use 'npm run build:prod' if your script name is different
+
+    - name: Deploy to cPanel via SSH
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.SSH_PORT }}
+        source: "dist/*"
+        target: "vasista.abcd.graphics"
