@@ -1,4 +1,5 @@
 import React from 'react';
+import AdditionalInfo from '../AdditionalInfo/AdditionalInfo';
 import styles from './ContactInfo.module.css';
 
 const ContactInfo = () => {
@@ -40,32 +41,7 @@ const ContactInfo = () => {
     }
   ];
 
-  const socialLinks = [
-    {
-      name: 'Facebook',
-      icon: '/icons/facebook.svg',
-      link: 'https://facebook.com/vasista',
-      color: '#1877f2'
-    },
-    {
-      name: 'Twitter',
-      icon: '/icons/twitter.svg',
-      link: 'https://twitter.com/vasista',
-      color: '#1da1f2'
-    },
-    {
-      name: 'LinkedIn',
-      icon: '/icons/linkedin.svg',
-      link: 'https://linkedin.com/company/vasista',
-      color: '#0077b5'
-    }
-  ];
 
-  const businessHours = [
-    { day: 'Monday - Friday', hours: '8:00 AM - 6:00 PM' },
-    { day: 'Saturday', hours: '9:00 AM - 4:00 PM' },
-    { day: 'Sunday', hours: 'Closed' }
-  ];
 
   return (
     <div className={styles.contactInfoContainer}>
@@ -98,40 +74,7 @@ const ContactInfo = () => {
         </div>
       </div>
 
-      <div className={styles.additionalInfo}>
-        <div className={styles.businessHours}>
-          <h4>Business Hours</h4>
-          <div className={styles.hoursList}>
-            {businessHours.map((schedule, index) => (
-              <div key={index} className={styles.hourItem}>
-                <span className={styles.day}>{schedule.day}</span>
-                <span className={styles.hours}>{schedule.hours}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className={styles.socialSection}>
-          <h4>Follow Us</h4>
-          <p>Stay updated with our latest projects and design inspiration</p>
-          <div className={styles.socialLinks}>
-            {socialLinks.map((social, index) => (
-              <a
-                key={index}
-                href={social.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.socialLink}
-                aria-label={`Follow us on ${social.name}`}
-                style={{ '--social-color': social.color }}
-              >
-                <img src={social.icon} alt={social.name} />
-                <span>{social.name}</span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
+   
     </div>
   );
 };
