@@ -72,27 +72,27 @@ const About = () => {
           <div className={styles.teamGrid}>
             <div className={styles.teamMember}>
               <div className={styles.memberImage}>
-                <img src="/images/team-1.jpg" alt="Sarah Johnson - Lead Designer" />
+                <img src="/images/team-1.jpg" alt="Ananya Sharma - Lead Designer" />
               </div>
-              <h3>Sarah Johnson</h3>
+              <h3>Ananya Sharma</h3>
               <p className={styles.memberRole}>Lead Designer</p>
-              <p>With over 12 years of experience in interior design, Sarah brings creativity and precision to every project.</p>
+              <p>With over 12 years of experience in interior design, Ananya brings creativity and precision to every project.</p>
             </div>
             <div className={styles.teamMember}>
               <div className={styles.memberImage}>
-                <img src="/images/team-2.jpg" alt="Michael Chen - Modular Specialist" />
+                <img src="/images/team-2.jpg" alt="Rohan Mehta - Modular Specialist" />
               </div>
-              <h3>Michael Chen</h3>
+              <h3>Rohan Mehta</h3>
               <p className={styles.memberRole}>Modular Specialist</p>
-              <p>Michael's expertise in modular design ensures efficient, flexible solutions for modern living spaces.</p>
+              <p>Rohan's expertise in modular design ensures efficient, flexible solutions for modern living spaces.</p>
             </div>
             <div className={styles.teamMember}>
               <div className={styles.memberImage}>
-                <img src="/images/team-3.jpg" alt="Emily Rodriguez - Project Manager" />
+                <img src="/images/team-3.jpg" alt="Priya Patel - Project Manager" />
               </div>
-              <h3>Emily Rodriguez</h3>
+              <h3>Priya Patel</h3>
               <p className={styles.memberRole}>Project Manager</p>
-              <p>Emily ensures every project runs smoothly, on time, and within budget while maintaining our high standards.</p>
+              <p>Priya ensures every project runs smoothly, on time, and within budget while maintaining our high standards.</p>
             </div>
           </div>
         </div>

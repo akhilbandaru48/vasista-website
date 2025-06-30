@@ -46,6 +46,23 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
+  // Helper function to check if a link is active
+  const isActiveLink = (path) => {
+    if (path === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(path);
+  };
+
+  const navItems = [
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
+    { path: '/services', label: 'Services' },
+    { path: '/projects', label: 'Projects' },
+    { path: '/blog', label: 'Blog' },
+    { path: '/contact', label: 'Contact' }
+  ];
+
   return (
     <header className={styles.header}>
       <div className={styles.topBar}>
@@ -57,42 +74,65 @@ const Header = () => {
           <span>Free Consultations</span>
         </div>
         <div className={styles.rightInfo}>
-          <a href="#">Careers</a>
-          <a href="#">FAQ</a>
+          <a href="#" aria-label="Careers">Careers</a>
+          <a href="#" aria-label="FAQ">FAQ</a>
           <div className={styles.socials}>
-            <a href="#"><img src="/icons/twitter.svg" alt="Twitter" className={styles.socialIcon} /></a>
-            <a href="#"><img src="/icons/facebook.svg" alt="Facebook" className={styles.socialIcon} /></a>
-            <a href="#"><img src="/icons/linkedin.svg" alt="LinkedIn" className={styles.socialIcon} /></a>
+            <a href="#" aria-label="Twitter">
+              <img src="/icons/twitter.svg" alt="Twitter" className={styles.socialIcon} />
+            </a>
+            <a href="#" aria-label="Facebook">
+              <img src="/icons/facebook.svg" alt="Facebook" className={styles.socialIcon} />
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <img src="/icons/linkedin.svg" alt="LinkedIn" className={styles.socialIcon} />
+            </a>
           </div>
           <div className={styles.phone}>
             <span>(123) 456-7890</span>
           </div>
         </div>
       </div>
-      <nav className={styles.navBar}>
-        <Link to="/" className={styles.logo}>Vasista</Link>
+      <nav className={styles.navBar} role="navigation" aria-label="Main navigation">
+        <Link to="/" className={styles.logo} aria-label="Vasista Home">
+          Vasista
+        </Link>
         
         <button 
           className={`${styles.mobileMenuButton} ${isMobileMenuOpen ? styles.active : ''}`}
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="main-menu"
         >
           <span></span>
           <span></span>
           <span></span>
         </button>
         
-        <ul className={`${styles.menu} ${isMobileMenuOpen ? styles.active : ''}`}>
-          <li><Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>
-          <li><Link to="/about" onClick={() => setIsMobileMenuOpen(false)}>About</Link></li>
-          <li><Link to="/services" onClick={() => setIsMobileMenuOpen(false)}>Services</Link></li>
-          <li><Link to="/projects" onClick={() => setIsMobileMenuOpen(false)}>Projects</Link></li>
-          <li><Link to="/blog" onClick={() => setIsMobileMenuOpen(false)}>Blog</Link></li>
-          <li><Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link></li>
+        <ul 
+          className={`${styles.menu} ${isMobileMenuOpen ? styles.active : ''}`}
+          id="main-menu"
+          role="menubar"
+        >
+          {navItems.map((item) => (
+            <li key={item.path} role="none">
+              <Link 
+                to={item.path} 
+                className={`${styles.menuLink} ${isActiveLink(item.path) ? styles.active : ''}`}
+                onClick={() => setIsMobileMenuOpen(false)}
+                role="menuitem"
+                aria-current={isActiveLink(item.path) ? 'page' : undefined}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
         </ul>
         
         <div className={styles.navButton}>
-          <Link to="/consultation" className="btn btn-lg">Get Free Consultation</Link>
+          <Link to="/consultation" className="btn btn-lg" aria-label="Get Free Consultation">
+            Get Free Consultation
+          </Link>
         </div>
       </nav>
     </header>

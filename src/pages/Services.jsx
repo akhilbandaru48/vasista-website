@@ -39,7 +39,7 @@ const Services = () => {
               </div>
               <h3>Interior Design</h3>
               <p>Complete interior transformation services that reflect your personality and enhance your lifestyle.</p>
-              <ul>
+              <ul className={styles.serviceList}>
                 <li>Space planning & layout</li>
                 <li>Color & material selection</li>
                 <li>Furniture & decor</li>

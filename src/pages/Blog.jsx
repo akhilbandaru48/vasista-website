@@ -77,7 +77,7 @@ const Blog = () => {
       title: "10 Essential Tips for Modern Kitchen Design",
       excerpt: "Discover the key principles that make a kitchen both beautiful and functional. From layout optimization to material selection, learn how to create your dream kitchen.",
       category: "Kitchen Design",
-      author: "Sarah Johnson",
+      author: "Ananya Sharma",
       date: "February 15, 2024",
       readTime: "5 min read",
       image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop&crop=center",
@@ -88,7 +88,7 @@ const Blog = () => {
       title: "The Future of Modular Furniture: Smart Solutions for Small Spaces",
       excerpt: "Explore innovative modular furniture designs that maximize space efficiency while maintaining style and comfort in compact living environments.",
       category: "Modular Design",
-      author: "Michael Chen",
+      author: "Rohan Mehta",
       date: "February 10, 2024",
       readTime: "7 min read",
       image: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&h=600&fit=crop&crop=center",
@@ -99,7 +99,7 @@ const Blog = () => {
       title: "Color Psychology in Interior Design: Creating the Perfect Mood",
       excerpt: "Understand how different colors affect our emotions and learn how to use color psychology to create the perfect atmosphere in your home.",
       category: "Interior Design",
-      author: "Emily Rodriguez",
+      author: "Priya Patel",
       date: "February 5, 2024",
       readTime: "6 min read",
       image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop&crop=center",
@@ -119,7 +119,7 @@ const Blog = () => {
       />
       
       <section className={styles.blogSection}>
-        <div className={styles.container}>
+        <div className={styles.blog_Container}>
           <div className={styles.blogHeader}>
             <h2>Latest Articles</h2>
             <p>Stay updated with the latest trends, tips, and insights in modular and interior design.</p>

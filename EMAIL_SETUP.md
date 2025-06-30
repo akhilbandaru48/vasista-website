@@ -196,8 +196,8 @@ The email template includes:
 │                                     │
 │ ┌─────────────────────────────────┐ │
 │ │      Contact Information        │ │
-│ │  • Name: John Doe               │ │
-│ │  • Email: john@example.com      │ │
+│ │  • Name: Aarav Singh               │ │
+│ │  • Email: aarav@example.com      │ │
 │ │  • Phone: +1 (555) 123-4567     │ │
 │ │  • Subject: Project Consultation │ │
 │ │  • Project Type: Kitchen Remodel │ │

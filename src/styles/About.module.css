@@ -40,7 +40,7 @@
 
 .storyImage img {
   width: 100%;
-  border-radius: 20px;
+  border-radius: 1.2rem;
   box-shadow: var(--boxshadow-secondary);
 }
 
@@ -67,7 +67,7 @@
 .valueCard {
   background: var(--septenary-color);
   padding: 2rem;
-  border-radius: 15px;
+  border-radius: 0.9rem;
   text-align: center;
   box-shadow: var(--boxshadow-primary);
   transition: transform 0.3s ease;
@@ -78,8 +78,8 @@
 }
 
 .valueIcon {
-  width: 60px;
-  height: 60px;
+  width: 3.7rem;
+  height: 3.7rem;
   margin: 0 auto 1.5rem;
   background: var(--primary-color);
   border-radius: 50%;
@@ -89,8 +89,9 @@
 }
 
 .valueIcon img {
-  width: 30px;
-  height: 30px;
+  width: 2rem;
+  height: 2rem;
+  filter: invert(1);
 }
 
 .valueCard h3 {
@@ -129,13 +130,13 @@
   text-align: center;
   background: var(--senary-color);
   padding: 2rem;
-  border-radius: 15px;
+  border-radius: 0.9rem;
   box-shadow: var(--boxshadow-primary);
 }
 
 .memberImage {
-  width: 120px;
-  height: 120px;
+  width: 12rem;
+  height: 12rem;
   margin: 0 auto 1.5rem;
   border-radius: 50%;
   overflow: hidden;

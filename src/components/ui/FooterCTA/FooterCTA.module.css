@@ -1,7 +1,10 @@
 .footerCta {
   background: var(--secondary-color);
   color: #fff;
-  padding: 3rem 2rem 1.5rem 2rem;
+  padding:  2rem ;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .ctaRow {
   display: flex;
@@ -9,8 +12,7 @@
   justify-content: space-between;
   background: var(--tertiary-color);
   padding: 2rem 2.5rem;
-  border-radius: 24px;
-  margin-bottom: 2.5rem;
+  border-radius: 1.2rem;
   gap: 1rem;
 }
 .heading {
@@ -35,7 +37,7 @@
 .contactBox {
   background: var(--quaternary-color);
   color: var(--secondary-color);
-  border-radius: 12px;
+  border-radius: 0.7rem;
   padding: 0.7rem 1.2rem;
   margin-top: 1rem;
   font-weight: 600;

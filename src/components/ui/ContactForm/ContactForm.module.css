@@ -8,8 +8,8 @@
 .contactForm {
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(20px);
-  border-radius: 24px;
-  padding: 2rem 3.5rem;
+  border-radius: 1.2rem;
+  padding: 2rem 2.5rem;
   box-shadow: 
     0 25px 50px rgba(0, 0, 0, 0.08),
     0 12px 24px rgba(247, 201, 72, 0.12),
@@ -129,7 +129,7 @@
 .formSelect,
 .formTextarea {
   width: 100%;
-  padding: 1.5rem 1.25rem 0.75rem;
+  padding: 1.75rem 1.25rem 0.75rem;
   border: none;
   background: transparent;
   font-size: 1rem;
@@ -179,7 +179,7 @@
 }
 
 .floatingLabel.active {
-  top: 0.75rem;
+  top: 0.5rem;
   left: 1.25rem;
   font-size: 0.875rem;
   color: var(--primary-color);
@@ -189,22 +189,20 @@
 }
 
 .errorMessage {
-  color: #ef4444;
+  color: var(--primary-dange  r);
   font-size: 0.875rem;
-  margin-top: 0.75rem;
   padding: 0.75rem 1rem;
   background: rgba(239, 68, 68, 0.08);
   border-radius: 12px;
-  border-left: 4px solid #ef4444;
+  border-left: 4px solid var(--primary-danger);
   animation: slideIn 0.3s ease-out;
   font-weight: 500;
   line-height: 1.4;
 }
 
 .submitError {
-  color: #ef4444;
+  color: var(--primary-danger);
   font-size: 0.875rem;
-  margin-bottom: 1.5rem;
   padding: 1rem 1.25rem;
   background: rgba(239, 68, 68, 0.08);
   border-radius: 16px;

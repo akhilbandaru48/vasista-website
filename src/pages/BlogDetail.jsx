@@ -337,7 +337,7 @@ const BlogDetail = () => {
         <p>By following these tips, you can create a modern kitchen that combines style, functionality, and longevity. Remember, the best kitchen design is one that works for your specific lifestyle and needs.</p>
       `,
       category: "Kitchen Design",
-      author: "Sarah Johnson",
+      author: "Ananya Sharma",
       date: "February 15, 2024",
       readTime: "5 min read",
       image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop&crop=center",
@@ -347,30 +347,25 @@ const BlogDetail = () => {
       id: 8,
       title: "The Future of Modular Furniture: Smart Solutions for Small Spaces",
       content: `
-        <p>As urban living spaces continue to shrink, the demand for innovative modular furniture solutions is growing. Let's explore how modern design is revolutionizing small space living.</p>
+        <p>As urban living spaces continue to shrink, the demand for innovative modular furniture solutions is growing rapidly. The future of furniture design lies in creating pieces that are not only beautiful but also incredibly functional and adaptable.</p>
         
-        <h2>Understanding Modular Design</h2>
-        <p>Modular furniture consists of standardized units that can be arranged in different combinations. This flexibility allows homeowners to adapt their spaces to changing needs without major renovations.</p>
+        <h2>Smart Integration</h2>
+        <p>Modern modular furniture is becoming increasingly intelligent. From built-in charging stations to integrated lighting systems, furniture is evolving to meet the technological needs of contemporary living.</p>
         
-        <h2>Key Benefits of Modular Furniture</h2>
+        <h2>Space Optimization</h2>
+        <p>The key to successful small space living is maximizing every square foot. Modular furniture achieves this through:</p>
         <ul>
-          <li><strong>Flexibility:</strong> Easy to reconfigure for different uses</li>
-          <li><strong>Space Efficiency:</strong> Maximizes every square foot</li>
-          <li><strong>Cost-Effective:</strong> Reduces the need for multiple pieces</li>
-          <li><strong>Sustainability:</strong> Longer lifespan through adaptability</li>
+          <li>Multi-functional pieces that serve multiple purposes</li>
+          <li>Stackable and nestable designs</li>
+          <li>Expandable and collapsible elements</li>
+          <li>Hidden storage compartments</li>
         </ul>
         
-        <h2>Innovative Solutions for Small Spaces</h2>
-        <p>Modern modular furniture goes beyond basic storage units. Today's solutions include:</p>
+        <h2>Customization Options</h2>
+        <p>Today's modular furniture offers unprecedented customization. Consumers can mix and match components to create pieces that perfectly fit their space and lifestyle needs.</p>
         
-        <h3>Transformable Furniture</h3>
-        <p>Pieces that serve multiple functions—sofas that become beds, coffee tables that expand into dining tables, and storage ottomans that provide seating and organization.</p>
-        
-        <h3>Wall-Mounted Systems</h3>
-        <p>Vertical storage solutions that keep floors clear while providing ample storage. These systems can include everything from bookshelves to home offices.</p>
-        
-        <h3>Customizable Storage</h3>
-        <p>Modular storage units that can be configured to fit specific spaces and needs, from closets to entertainment centers.</p>
+        <h2>Sustainability Focus</h2>
+        <p>Environmental consciousness is driving innovation in modular furniture design. Manufacturers are using sustainable materials and creating pieces that are built to last, reducing waste and environmental impact.</p>
         
         <h2>Technology Integration</h2>
         <p>The future of modular furniture includes smart technology integration. Imagine storage units with built-in charging stations, lighting, and even climate control for wine storage.</p>
@@ -387,7 +382,7 @@ const BlogDetail = () => {
         <p>Modular furniture represents the future of small space living, offering solutions that are as beautiful as they are functional. As technology advances, we can expect even more innovative solutions that make the most of every square foot.</p>
       `,
       category: "Modular Design",
-      author: "Michael Chen",
+      author: "Rohan Mehta",
       date: "February 10, 2024",
       readTime: "7 min read",
       image: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&h=600&fit=crop&crop=center",
@@ -397,58 +392,56 @@ const BlogDetail = () => {
       id: 9,
       title: "Color Psychology in Interior Design: Creating the Perfect Mood",
       content: `
-        <p>Colors have a profound impact on our emotions, behavior, and overall well-being. Understanding color psychology is essential for creating spaces that not only look beautiful but also feel right.</p>
+        <p>Color is one of the most powerful tools in interior design. It can influence our emotions, affect our mood, and even impact our behavior. Understanding color psychology is essential for creating spaces that not only look beautiful but also feel right.</p>
         
-        <h2>The Science of Color Psychology</h2>
+        <h2>The Psychology of Color</h2>
         <p>Different colors evoke different emotional responses:</p>
-        
-        <h3>Warm Colors</h3>
         <ul>
-          <li><strong>Red:</strong> Energy, passion, excitement</li>
-          <li><strong>Orange:</strong> Creativity, enthusiasm, warmth</li>
-          <li><strong>Yellow:</strong> Happiness, optimism, clarity</li>
+          <li><strong>Blue:</strong> Calming, trustworthy, and professional</li>
+          <li><strong>Green:</strong> Natural, balanced, and refreshing</li>
+          <li><strong>Yellow:</strong> Energetic, optimistic, and creative</li>
+          <li><strong>Red:</strong> Passionate, energetic, and attention-grabbing</li>
+          <li><strong>Purple:</strong> Luxurious, creative, and mysterious</li>
+          <li><strong>Orange:</strong> Friendly, confident, and adventurous</li>
+          <li><strong>Pink:</strong> Gentle, romantic, and calming</li>
+          <li><strong>Brown:</strong> Stable, reliable, and natural</li>
+          <li><strong>Gray:</strong> Sophisticated, neutral, and balanced</li>
+          <li><strong>White:</strong> Clean, pure, and spacious</li>
         </ul>
         
-        <h3>Cool Colors</h3>
+        <h2>Creating Mood with Color</h2>
+        <p>To create specific moods in your space:</p>
+        
+        <h3>Calming Spaces</h3>
+        <p>Use soft blues, greens, and lavenders for bedrooms, bathrooms, and meditation areas. These colors promote relaxation and reduce stress.</p>
+        
+        <h3>Energetic Spaces</h3>
+        <p>Incorporate yellows, oranges, and bright reds in kitchens, home offices, and workout areas to boost energy and creativity.</p>
+        
+        <h3>Sophisticated Spaces</h3>
+        <p>Choose deep purples, rich browns, and elegant grays for living rooms and dining areas to create a sense of luxury and refinement.</p>
+        
+        <h2>Color Temperature</h2>
+        <p>Consider the temperature of colors:</p>
         <ul>
-          <li><strong>Blue:</strong> Calm, trust, stability</li>
-          <li><strong>Green:</strong> Nature, growth, harmony</li>
-          <li><strong>Purple:</strong> Luxury, creativity, mystery</li>
+          <li><strong>Warm colors</strong> (reds, oranges, yellows) create energy and intimacy</li>
+          <li><strong>Cool colors</strong> (blues, greens, purples) promote calm and spaciousness</li>
         </ul>
         
-        <h3>Neutral Colors</h3>
-        <ul>
-          <li><strong>White:</strong> Purity, cleanliness, simplicity</li>
-          <li><strong>Gray:</strong> Sophistication, balance, neutrality</li>
-          <li><strong>Black:</strong> Power, elegance, mystery</li>
-        </ul>
-        
-        <h2>Room-Specific Color Strategies</h2>
-        
-        <h3>Living Rooms</h3>
-        <p>Choose colors that promote social interaction and relaxation. Warm neutrals, soft blues, and gentle greens work well.</p>
-        
-        <h3>Bedrooms</h3>
-        <p>Opt for calming colors that promote rest and relaxation. Soft blues, lavenders, and warm neutrals are ideal.</p>
-        
-        <h3>Kitchens</h3>
-        <p>Use colors that stimulate appetite and energy. Warm yellows, oranges, and reds work well in moderation.</p>
-        
-        <h3>Home Offices</h3>
-        <p>Choose colors that promote focus and productivity. Blues, greens, and neutral tones are effective.</p>
-        
-        <h2>Color Application Tips</h2>
-        <ul>
-          <li>Use the 60-30-10 rule for color distribution</li>
-          <li>Consider natural light when choosing colors</li>
+        <h2>Practical Application</h2>
+        <p>When applying color psychology to your home:</p>
+        <ol>
+          <li>Start with your room's purpose and desired mood</li>
+          <li>Choose a primary color that supports that mood</li>
+          <li>Select complementary colors for balance</li>
+          <li>Use neutral colors to ground the space</li>
           <li>Test colors in your space before committing</li>
-          <li>Use color to create focal points and flow</li>
-        </ul>
+        </ol>
         
-        <p>By understanding and applying color psychology principles, you can create spaces that not only look beautiful but also support your emotional and psychological well-being.</p>
+        <p>Remember that personal associations with colors can vary significantly between individuals. The most important factor is how the colors make you feel in your own space.</p>
       `,
       category: "Interior Design",
-      author: "Emily Rodriguez",
+      author: "Priya Patel",
       date: "February 5, 2024",
       readTime: "6 min read",
       image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop&crop=center",

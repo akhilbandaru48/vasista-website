@@ -81,8 +81,8 @@
 }
 
 .socialLink img {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.2rem;
+  height: 1.2rem;
   filter: brightness(0) saturate(100%) invert(0);
   transition: filter 0.3s ease;
 }
@@ -106,7 +106,7 @@
 
 @media (max-width: 480px) {
   .additionalInfo {
-    padding: 1.25rem;
+    padding: 1rem;
   }
 
   .hourItem {
@@ -116,7 +116,7 @@
   }
 
   .socialLink {
-    padding: 0.625rem 0.875rem;
+    padding: 0.5rem 0.75rem;
   }
 }
 
@@ -124,7 +124,7 @@
 .socialLink:focus {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
-  border-radius: 4px;
+  border-radius: 0.4rem;
 }
 
 /* High contrast mode support */

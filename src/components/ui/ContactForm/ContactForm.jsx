@@ -41,15 +41,7 @@ const ContactForm = () => {
     { value: 'other', label: 'Other' }
   ];
 
-  const budgetOptions = [
-    { value: '', label: 'Select budget range' },
-    { value: 'under-10k', label: 'Under $10,000' },
-    { value: '10k-25k', label: '$10,000 - $25,000' },
-    { value: '25k-50k', label: '$25,000 - $50,000' },
-    { value: '50k-100k', label: '$50,000 - $100,000' },
-    { value: 'over-100k', label: 'Over $100,000' },
-    { value: 'flexible', label: 'Flexible' }
-  ];
+
 
   const validateField = (name, value) => {
     switch (name) {
@@ -295,9 +287,6 @@ const ContactForm = () => {
                   </option>
                 ))}
               </select>
-              <label htmlFor="subject" className={`${styles.floatingLabel} ${isFieldActive('subject') ? styles.active : ''}`}>
-                Subject *
-              </label>
               {errors.subject && (
                 <div id="subject-error" className={styles.errorMessage} role="alert">
                   {errors.subject}
@@ -324,14 +313,11 @@ const ContactForm = () => {
                   </option>
                 ))}
               </select>
-              <label htmlFor="projectType" className={`${styles.floatingLabel} ${isFieldActive('projectType') ? styles.active : ''}`}>
-                Project Type
-              </label>
             </div>
           </div>
 
           {/* Budget Field */}
-          <div className={styles.formGroup}>
+          {/* <div className={styles.formGroup}>
             <div className={`${styles.inputWrapper} ${isFieldActive('budget') ? styles.active : ''}`}>
               <select
                 id="budget"
@@ -348,11 +334,8 @@ const ContactForm = () => {
                   </option>
                 ))}
               </select>
-              <label htmlFor="budget" className={`${styles.floatingLabel} ${isFieldActive('budget') ? styles.active : ''}`}>
-                Budget Range
-              </label>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Message Field */}

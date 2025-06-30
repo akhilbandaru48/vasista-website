@@ -139,6 +139,63 @@
 .menu li a:hover::after {
   width: 100%;
 }
+
+/* Active state for menu links */
+.menu li a.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.menu li a.active::after {
+  width: 100%;
+  background: var(--primary-color);
+}
+
+/* Menu link class for the new structure */
+.menuLink {
+  color: #174c3c;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0.5rem 0;
+  position: relative;
+  white-space: nowrap;
+}
+
+.menuLink:hover {
+  color: var(--primary-color);
+}
+
+.menuLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.menuLink:hover::after {
+  width: 100%;
+}
+
+/* Active state for menu links */
+.menuLink.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.menuLink.active::after {
+  width: 100%;
+  background: var(--primary-color);
+}
+
 .navButton {
   display: flex;
   align-items: center;
@@ -277,6 +334,30 @@
   
   .menu li a::after {
     display: none;
+  }
+  
+  .menu li a.active {
+    background: var(--senary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  
+  /* Mobile styles for menuLink class */
+  .menuLink {
+    width: 100%;
+    padding: 1rem 2rem;
+    justify-content: center;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .menuLink::after {
+    display: none;
+  }
+  
+  .menuLink.active {
+    background: var(--senary-color);
+    color: var(--primary-color);
+    font-weight: 600;
   }
   
   .navButton {
