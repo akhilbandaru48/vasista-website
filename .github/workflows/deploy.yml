@@ -3,7 +3,7 @@ name: 🚀 Deploy Vite App to vasista.abcd.graphics
 on:
   push:
     branches:
-      - Sandeep.S  # Change this to your production branch if needed
+      - Sandeep.S  # Or main if you prefer
 
 jobs:
   deploy:
@@ -23,12 +23,11 @@ jobs:
 
       - name: 🏗️ Build Vite App
         run: |
-          echo "🛠 Building Vite app..."
           npm run build
-          echo "✅ Build completed."
-          ls -la dist || (echo "❌ 'dist' folder not found!" && exit 1)
+          echo "✅ Build complete!"
+          ls -la dist || (echo "❌ No 'dist' folder!" && exit 1)
 
-      - name: 🚀 Deploy to cPanel (vasista.abcd.graphics)
+      - name: 🚀 Deploy to cPanel
         env:
           SSH_KEY: ${{ secrets.SSH_KEY }}
         run: |
@@ -38,16 +37,18 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H 93.127.195.85 >> ~/.ssh/known_hosts
 
-          echo "🧹 Cleaning old files on server..."
-          ssh -o StrictHostKeyChecking=no abcd@93.127.195.85 << 'EOF'
+          echo "🧹 Cleaning server folder..."
+          ssh -o StrictHostKeyChecking=no abcd@93.127.195.85 << EOF
             if [ -d "/home/abcd/vasista.abcd.graphics" ]; then
               rm -rf /home/abcd/vasista.abcd.graphics/*
-              echo "✅ Server directory cleaned."
+              echo "✅ Old files removed."
             else
               mkdir -p /home/abcd/vasista.abcd.graphics
-              echo "📁 Target directory created."
+              echo "📁 Folder created."
             fi
-            EOF
+           EOF
 
-          echo "📤 Uploading new build files..."
+          echo "📤 Uploading new build..."
           scp -o StrictHostKeyChecking=no -r dist/* abcd@93.127.195.85:/home/abcd/vasista.abcd.graphics/
+
+          echo "✅ Deployment complete! Visit: https://vasista.abcd.graphics"
