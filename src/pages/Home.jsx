@@ -9,7 +9,7 @@ import GallerySection from '../components/ui/GallerySection/GallerySection';
 import TestimonialsSection from '../components/ui/TestimonialsSection/TestimonialsSection';
 import BlogSection from '../components/ui/BlogSection/BlogSection';
 import FooterCTA from '../components/ui/FooterCTA/FooterCTA';
-import styles from './Home.module.css';
+import styles from '../styles/Home.module.css';
 
 const Home = () => {
   return (

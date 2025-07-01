@@ -1,42 +1,118 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './BlogSection.module.css';
 
 const blogs = [
   {
-    image: '/public/images/blog1.png',
-    title: 'Maximizing Small Spaces: 5 Modular Design Secrets',
-    date: 'June 15, 2023',
-    desc: 'Discover innovative modular solutions that transform cramped spaces into functional, beautiful areas.',
+    id: 1,
+    slug: 'top-5-architectural-trends-2025',
+    image: '/images/modern-interior.jpg',
+    title: 'Top 5 Architectural Trends in 2025',
+    date: 'March 20, 2024',
+    category: 'Architecture',
+    readTime: '6 min read',
+    desc: 'Discover the cutting-edge architectural trends that will dominate 2025, from sustainable materials to smart home integration and biophilic design principles.',
   },
   {
-    image: '/public/images/blog2.png',
-    title: '2024 Interior Design Trends: What\'s Hot This Year',
-    date: 'May 20, 2023',
-    desc: 'Explore the latest design trends and how to incorporate them into your modular and interior projects.',
+    id: 2,
+    slug: 'plan-dream-home-india',
+    image: '/images/design-inspiration.jpg',
+    title: 'How to Plan Your Dream Home in India',
+    date: 'March 15, 2024',
+    category: 'Planning',
+    readTime: '8 min read',
+    desc: 'A comprehensive guide to planning your dream home in India, covering everything from site selection and Vastu principles to modern design considerations.',
   },
   {
-    image: '/public/images/blog3.png',
+    id: 3,
+    slug: 'sustainable-building-materials',
+    image: '/images/space-planning.jpg',
+    title: 'Sustainable Building Materials You Should Know',
+    date: 'March 10, 2024',
+    category: 'Sustainability',
+    readTime: '7 min read',
+    desc: 'Explore eco-friendly building materials that are revolutionizing construction while maintaining durability, aesthetics, and cost-effectiveness.',
+  },
+  {
+    id: 4,
+    slug: 'vasista-project-design-execution',
+    image: '/images/color-psychology.jpg',
+    title: 'Inside a Vasista Project: Design to Execution Journey',
+    date: 'March 5, 2024',
+    category: 'Case Study',
+    readTime: '10 min read',
+    desc: 'Follow the complete journey of a Vasista project from initial concept to final execution, showcasing our design methodology and attention to detail.',
+  },
+  {
+    id: 5,
+    slug: 'modular-kitchen-revolution',
+    image: '/images/kitchen-renovation.jpg',
     title: 'Kitchen Design Revolution: Smart Modular Solutions',
-    date: 'Jul 2, 2023',
-    desc: 'Learn how modern modular kitchen designs are revolutionizing the heart of every home.',
+    date: 'February 28, 2024',
+    category: 'Kitchen Design',
+    readTime: '5 min read',
+    desc: 'Learn how modern modular kitchen designs are revolutionizing the heart of every home with smart storage solutions and contemporary aesthetics.',
+  },
+  {
+    id: 6,
+    slug: 'maximizing-small-spaces-modular-design',
+    image: '/images/space-planning.jpg',
+    title: 'Maximizing Small Spaces: 5 Modular Design Secrets',
+    date: 'February 20, 2024',
+    category: 'Modular Design',
+    readTime: '6 min read',
+    desc: 'Discover innovative modular solutions that transform cramped spaces into functional, beautiful areas that maximize every square foot.',
   },
 ];
 
 const BlogSection = () => (
   <section className={styles.blog}>
-    <h2 className={styles.heading}>The Vasista Design Blog</h2>
-    <div className={styles.cardsGrid}>
-      {blogs.map((b, idx) => (
-        <div className={styles.card} key={idx}>
-          <img src={b.image} alt={b.title} className={styles.cardImage} />
-          <div className={styles.cardContent}>
-            <span className={styles.date}>{b.date}</span>
-            <h3 className={styles.cardTitle}>{b.title}</h3>
-            <p className={styles.cardDesc}>{b.desc}</p>
-            <a href="#" className={styles.readMore}>Read More</a>
-          </div>
-        </div>
-      ))}
+    <div className={styles.blog_container}>
+      <div className={styles.blog_header}>
+        <h2 className={styles.blog_heading}>The Vasista Design Blog</h2>
+        <p className={styles.blog_subtitle}>
+          Insights, inspiration, and expert tips for modern Indian homes
+        </p>
+      </div>
+      
+      <div className={styles.blog_cardsGrid}>
+        {blogs.slice(0, 4).map((blog) => (
+          <Link 
+            to={`/blog/${blog.slug}`} 
+            className={styles.blog_card} 
+            key={blog.id}
+          >
+            <div className={styles.blog_imageContainer}>
+              <img src={blog.image} alt={blog.title} className={styles.blog_cardImage} />
+              <div className={styles.blog_categoryBadge}>{blog.category}</div>
+              <div className={styles.blog_overlay} />
+            </div>
+            <div className={styles.blog_cardContent}>
+              <div className={styles.blog_meta}>
+                <span className={styles.blog_date}>{blog.date}</span>
+                <span className={styles.blog_readTime}>{blog.readTime}</span>
+              </div>
+              <h3 className={styles.blog_cardTitle}>{blog.title}</h3>
+              <p className={styles.blog_cardDesc}>{blog.desc}</p>
+              <div className={styles.blog_readMore}>
+                <span>Read More</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+      
+      <div className={styles.blog_cta}> 
+        <Link to="/blog" className={styles.blog_viewAllBtn}>
+          View All Articles
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </Link>
+      </div>
     </div>
   </section>
 );

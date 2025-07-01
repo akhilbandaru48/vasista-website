@@ -1,11 +1,14 @@
 .gallery {
-  background: #fffbe9;
+  background: var(--senary-color);
   padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 .heading {
   font-size: 2rem;
   font-weight: 700;
-  color: #2d3a1a;
+  color: var(--tertiary-color);
   text-align: center;
 }
 .grid {
@@ -15,9 +18,9 @@
   justify-items: center;
 }
 .imageWrapper img {
-  width: 120px;
-  height: 120px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(60,60,60,0.06);
+  border-radius: 1rem;
+  box-shadow: var(--boxshadow-tertiary);
 } 

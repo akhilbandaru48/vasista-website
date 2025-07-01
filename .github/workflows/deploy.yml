@@ -1,0 +1,49 @@
+name: Deploy Vite App to vasista.abcd.graphics
+
+on:
+  push:
+    branches:
+      - Sandeep.S
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Vite App
+        run: |
+          npm run build
+          ls -la dist || (exit 1)
+
+      - name: Deploy to cPanel
+        env:
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H 93.127.195.85 >> ~/.ssh/known_hosts
+
+          ssh -o StrictHostKeyChecking=no abcd@93.127.195.85 << 'EOF'
+            if [ -d "/home/abcd/vasista.abcd.graphics" ]; then
+              rm -rf /home/abcd/vasista.abcd.graphics/*
+            else
+              mkdir -p /home/abcd/vasista.abcd.graphics
+            fi
+          EOF
+
+          scp -o StrictHostKeyChecking=no -r dist/* abcd@93.127.195.85:/home/abcd/vasista.abcd.graphics/
+#Runs Successfully
+
+

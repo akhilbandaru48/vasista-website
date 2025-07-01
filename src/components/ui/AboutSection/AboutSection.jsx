@@ -26,7 +26,7 @@ const AboutSection = () => (
       </div>
     </div>
     <div className={styles.aboutImage}>
-      <img src="/public/images/about-tree.png" alt="About Our Design Team" />
+      <img src="/images/about-team.jpg" alt="About Our Design Team" />
     </div>
   </section>
 );

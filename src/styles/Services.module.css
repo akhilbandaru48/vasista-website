@@ -1,0 +1,365 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Services Overview Section */
+.servicesOverview {
+  padding: 4rem 0;
+  background: var(--septenary-color);
+}
+
+.servicesOverview h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;  
+} 
+
+.servicesGrid { 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.serviceCard {
+  background: var(--senary-color);
+  padding: 2.5rem;
+  border-radius: 0.9rem;
+  box-shadow: var(--boxshadow-primary);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.serviceIcon {
+  width: 4.3rem;
+  height: 4.3rem;
+  background: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.serviceIcon img {
+  width: 2.1rem;
+  height: 2.1rem;
+}
+
+.serviceCard h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.serviceCard p {
+  color: var(--denary-color);
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.serviceCard ul {
+  list-style: none;
+  padding: 0;
+  margin-top: auto;
+}
+
+.serviceCard li {
+  color: var(--denary-color);
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.serviceCard li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Process Section */
+.processSection {
+  padding: 4rem 0;
+  background: var(--senary-color);
+}
+
+.processSection h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 3rem;
+}
+
+.processSteps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.processStep {
+  text-align: center;
+  background: var(--septenary-color);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: var(--boxshadow-secondary);
+  position: relative;
+}
+
+.stepNumber {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-color);
+  color: var(--tertiary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 1.5rem;
+}
+
+.processStep h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.processStep p {
+  color: var(--denary-color);
+  line-height: 1.6;
+}
+
+/* Pricing Section */
+.pricingSection {
+  padding: 4rem 0;
+  background: var(--septenary-color);
+}
+
+.pricingSection h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 3rem;
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pricingCard {
+  background: var(--senary-color);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: var(--boxshadow-primary);
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.pricingCard:hover {
+  transform: translateY(-5px);
+}
+
+.pricingCard.featured {
+  background: var(--secondary-color);
+  color: var(--septenary-color);
+  transform: scale(1.05);
+}
+
+.featuredBadge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-color);
+  color: var(--tertiary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.pricingCard h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.pricingCard.featured h3 {
+  color: var(--septenary-color);
+}
+
+.pricingCard:not(.featured) h3 {
+  color: var(--secondary-color);
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.priceDescription {
+  color: var(--denary-color);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.pricingCard.featured .priceDescription {
+  color: var(--quinary-color);
+}
+
+.pricingCard ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.pricingCard li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.pricingCard:not(.featured) li {
+  color: var(--denary-color);
+}
+
+.pricingCard.featured li {
+  color: var(--quinary-color);
+}
+
+.pricingCard li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 4rem 0;
+  background: var(--secondary-color);
+  color: var(--septenary-color);
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaContent h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ctaContent p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--quinary-color);
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .servicesOverview h2,
+  .processSection h2,
+  .pricingSection h2,
+  .ctaContent h2 {
+    font-size: 2rem;
+  }
+  
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .processSteps {
+    grid-template-columns: 1fr;
+  }
+  
+  .pricingGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pricingCard.featured {
+    transform: none;
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .price {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicesOverview h2,
+  .processSection h2,
+  .pricingSection h2,
+  .ctaContent h2 {
+    font-size: 1.8rem;
+  }
+  
+  .serviceCard,
+  .processStep,
+  .pricingCard {
+    padding: 1.5rem;
+  }
+  
+  .serviceIcon {
+    width: 3.7rem;
+    height: 3.7rem;
+  }
+  
+  .serviceIcon img {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+} 
