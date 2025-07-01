@@ -1,22 +1,24 @@
 .footerCta {
-  background: #174c3c;
+  background: var(--secondary-color);
   color: #fff;
-  padding: 3rem 2rem 1.5rem 2rem;
+  padding:  2rem ;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .ctaRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #2d3a1a;
+  background: var(--tertiary-color);
   padding: 2rem 2.5rem;
-  border-radius: 24px;
-  margin-bottom: 2.5rem;
+  border-radius: 1.2rem;
   gap: 1rem;
 }
 .heading {
   font-size: 2rem;
   font-weight: 700;
-  color: #ffe066;
+  color: var(--quaternary-color);
 }
 .footerMain {
   display: flex;
@@ -30,13 +32,12 @@
 .logo {
   font-size: 1.7rem;
   font-weight: 700;
-  color: #ffe066;
-  margin-bottom: 0.7rem;
+  color: var(--quaternary-color);
 }
 .contactBox {
-  background: #ffe066;
-  color: #174c3c;
-  border-radius: 12px;
+  background: var(--quaternary-color);
+  color: var(--secondary-color);
+  border-radius: 0.7rem;
   padding: 0.7rem 1.2rem;
   margin-top: 1rem;
   font-weight: 600;
@@ -46,7 +47,7 @@
   gap: 2.5rem;
 }
 .linksSection h4 {
-  color: #ffe066;
+  color: var(--quaternary-color);
   margin-bottom: 0.7rem;
 }
 .linksSection ul {
@@ -64,7 +65,7 @@
   transition: color 0.2s;
 }
 .linksSection a:hover {
-  color: #f7c948;
+  color: var(--primary-color);
 }
 .socials a {
   margin-right: 0.5rem;

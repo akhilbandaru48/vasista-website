@@ -2,7 +2,15 @@ import React from 'react';
 import styles from './FooterCTA.module.css';
 
 const FooterCTA = () => (
-  <footer className={styles.footerCta}>
+  <footer 
+    className={styles.footerCta}
+    style={{
+      backgroundImage: `linear-gradient(rgb(255 255 255 / 60%), rgb(255 255 255 / 20%)), url('/images/footer-bg.jpg')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}
+  >
     <div className={styles.ctaRow}>
       <h2 className={styles.heading}>Ready to Transform Your Space?</h2>
       <button className="btn btn-lg">Start Your Design Journey Today!</button>

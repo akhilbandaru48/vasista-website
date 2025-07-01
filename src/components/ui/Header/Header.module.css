@@ -22,7 +22,7 @@
 }
 .dot {
   margin: 0 0.5rem;
-  color: #f7c948;
+  color: var(--primary-color);
 }
 .rightInfo {
   display: flex;
@@ -36,12 +36,14 @@
   font-size: 0.9rem;
 }
 .rightInfo a:hover {
-  color: #f7c948;
+  color: var(--primary-color);
 }
 .socials {
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  justify-content: center;
+  align-items: center;
 }
 .socials a {
   display: flex;
@@ -122,7 +124,7 @@
   white-space: nowrap;
 }
 .menu li a:hover {
-  color: #f7c948;
+  color: var(--primary-color);
 }
 .menu li a::after {
   content: '';
@@ -131,12 +133,69 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #f7c948;
+  background: var(--primary-color);
   transition: width 0.3s ease;
 }
 .menu li a:hover::after {
   width: 100%;
 }
+
+/* Active state for menu links */
+.menu li a.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.menu li a.active::after {
+  width: 100%;
+  background: var(--primary-color);
+}
+
+/* Menu link class for the new structure */
+.menuLink {
+  color: #174c3c;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0.5rem 0;
+  position: relative;
+  white-space: nowrap;
+}
+
+.menuLink:hover {
+  color: var(--primary-color);
+}
+
+.menuLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.menuLink:hover::after {
+  width: 100%;
+}
+
+/* Active state for menu links */
+.menuLink.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.menuLink.active::after {
+  width: 100%;
+  background: var(--primary-color);
+}
+
 .navButton {
   display: flex;
   align-items: center;
@@ -150,8 +209,8 @@
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  width: 30px;
-  height: 30px;
+  width: 1.5rem;
+  height: 1.5rem;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -166,7 +225,7 @@
 
 .mobileMenuButton span {
   width: 100%;
-  height: 3px;
+  height: 0.2rem;
   background: #174c3c;
   border-radius: 2px;
   transition: all 0.3s ease;
@@ -275,6 +334,30 @@
   
   .menu li a::after {
     display: none;
+  }
+  
+  .menu li a.active {
+    background: var(--senary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  
+  /* Mobile styles for menuLink class */
+  .menuLink {
+    width: 100%;
+    padding: 1rem 2rem;
+    justify-content: center;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .menuLink::after {
+    display: none;
+  }
+  
+  .menuLink.active {
+    background: var(--senary-color);
+    color: var(--primary-color);
+    font-weight: 600;
   }
   
   .navButton {

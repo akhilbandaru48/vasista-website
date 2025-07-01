@@ -2,12 +2,12 @@ import React from 'react';
 import styles from './GallerySection.module.css';
 
 const images = [
-  '/public/images/gallery1.png',
-  '/public/images/gallery2.png',
-  '/public/images/gallery3.png',
-  '/public/images/gallery4.png',
-  '/public/images/gallery5.png',
-  '/public/images/gallery6.png',
+  '/images/gallery1.jpg',
+  '/images/gallery2.jpg',
+  '/images/gallery3.jpg',
+  '/images/kitchen-renovation.jpg',
+  '/images/living-room-design.jpg',
+  '/images/bathroom-renovation.jpg',
 ];
 
 const GallerySection = () => (
